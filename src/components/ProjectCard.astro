@@ -1,0 +1,115 @@
+---
+// import { getCollection, getEntry } from "astro:content";
+// const blogPosts = await getCollection("blog");
+interface Props {
+	title: string;
+	date: string;
+	summary: string;
+    stack: string | undefined;
+    tags: string | undefined;
+    image: string | undefined;
+    body: string;
+    slug: string;
+    url: string | undefined;
+    // entry: object;
+    
+}
+// const { bullet } = Astro.props
+const {  title, date, summary, stack, tags, image, body, slug, url} = Astro.props;
+---
+
+
+        <div class="wrapper home">
+            <div class="collapsible-projects">
+                <span class="project-date">{date}</span>
+                <details>
+                    <summary>
+                        <span class="project-title">{title}</span>
+                        <div class="project-stack">{tags} | {stack}</div>
+                    </summary>
+                    <div class="project-content">
+                        <a href={`/posts/${slug}`}>Click here for me details on this project</a>
+                        <p>{body}</p>
+                        <p>{image}</p>
+                        <p>Summary:{summary}</p>
+                        <a href={url}  target="_blank">{url}</a>
+                        ADD PROJECT LINKS (git hub) with a component
+                        
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+
+<style>
+ 
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+    
+    
+    .wrapper {
+      min-height: var(--wrapper-height);
+      place-items: center;
+      margin: 1rem 3rem 0;
+    }
+    .wrapper {
+        margin: 1rem !important;
+        /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
+      }
+    .home {
+      justify-content: left;
+    }
+    .project-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 19px;
+    }
+    
+    .project-content {
+        font-family: 'Roboto', sans-serif;
+    }
+    .project-stack {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-size: 15px;
+    }
+    .project-date {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+    }
+    .collapsible-experiences, .collapsible-projects {
+      background-color: #fce49f;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    
+    }
+    
+    .collapsible-projects {
+      background-color: #efdefc;
+    
+    }
+    .experience-content, .project-content {
+      margin: 10px;
+    }
+    summary {
+      /* font-family: var(--font-pixel); */
+      
+      font-size: 25px;
+      list-style-type: '[+] ';
+    }
+    
+    details[open] > summary {
+      list-style-type: '[−] ';
+    }
+    
+    
+    
+    
+    
+    </style>

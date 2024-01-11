@@ -1,0 +1,25 @@
+---
+
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+
+// Get a specific page entry in a content collection by slug
+export async function getStaticPaths() {
+  const projectEntries = await getCollection("posts");
+  return projectEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content  } = await entry.render();
+---
+<Layout title=`${entry.data.title} | Alyssa Bédard``>
+  <main id="project-page">
+    <h2>{entry.data.title}</h2>
+    <Content />
+  </main>
+</Layout>
+
+
