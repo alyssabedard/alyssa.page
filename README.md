@@ -1,7 +1,9 @@
-## Readme
+
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-Curently building a personal website template with Astro. ✨
+👩🏻‍💻 Currently under development.  
+Personal website built with Astro. ✨ (Not yet web responsive)
+
 www.alyssabedard.com
 
 

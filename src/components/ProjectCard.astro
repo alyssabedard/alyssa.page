@@ -8,7 +8,7 @@ interface Props {
 	summary: string;
   image: string | undefined; 
   project: object;
-  stack: string[] | undefined;
+  stack: string[];
   tags: string[];
   url: string | undefined;
   isMoreDetail: boolean;
@@ -25,10 +25,15 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
         <details>
             <summary>
                 <span  class="project-title">{title}</span>
-                <div class="project-stack">{tags} | {stack}</div>
+                <div class="project-stack">{tags.join(", ")} | {stack.join(", ")}</div>
             </summary>
 
             <div class="project-content">
+
+              {/* Renders project link, if url field not empty */}
+              <!-- <a class="project-url" href={url}  target="_blank">{url}</a> -->
+              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
+
               <p>{summary}</p>
 
               {/* If project has more details show the page link and hide the body content 
@@ -41,9 +46,7 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
               {/* Renders image, if image field not empty */}
               {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
               
-              {/* Renders project link, if url field not empty */}
-              <!-- <a class="project-url" href={url}  target="_blank">{url}</a> -->
-              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
+              
               
             </div>
         </details>

@@ -2,7 +2,7 @@
 import Socials from './SocialButtons.astro';
 ---
 
-Find me on:
+<span id="find-me">Find me on:</span>
 {/*Encoded Email Address */}
 <Socials
     platform="mail"
@@ -16,3 +16,10 @@ Find me on:
     platform="notion" 
     url="https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4"
 />
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+    #find-me {
+        font-family: 'DM Serif Display', serif;
+    }
+</style>

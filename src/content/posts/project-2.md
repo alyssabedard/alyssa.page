@@ -1,13 +1,14 @@
 ---
-title: "Project 2"
-date: "Jan. 2023 - May 2023"
-summary: "This is summary of project2"
+title: "Developing a Knowledge Graph Framework for Drug Safety Prediction"
+date: "October 2023"
+summary: ""
 project:
-    stack:  ["Django", "Next.JS"]
-    tags:   ["Product"]
+    stack:  ["4th Annual Pharma AI Summit, London"]
+    tags:   ["Technical Presentation"]
     # url:
     isMoreDetail: false
 # image: "../images/black-heart-pixel.jpeg"
 ---
 
-Some text in the MD file abot prject 2
+<p>Collaborated with teammates and Pfizer's AI/ML Lead to deliver a technical presentation on knowledge graphs for drug safety.</p>
+<img src="https://www.images.alyssabedard.com/presentation.png" alt="Project Image" style="width:700px">

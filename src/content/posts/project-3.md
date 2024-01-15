@@ -1,15 +1,15 @@
 ---
-title: "Project 3"
-date: "Jan. 2023 - May 2023"
-summary: "This is summary of project3"
+title: "Helping Language Learners Reach Reading Literacy in Mandarin Chinese"
+date: "Nov. 2023 - Present"
+summary: "Language analysis tool for Chinese text – personal project"
 project:
-    stack:  ["Java", "Python"]
-    tags:   ["Project"]
-    url: "https://github.com/team-gradvek/gradvek"
+    stack:  ["Python", "Javascript"]
+    tags:   ["Web App Development "]
+    # url: "https://github.com/"
     isMoreDetail: false
 # image: "../images/black-heart-pixel.jpeg"
 ---
 
-##### HERE
-<div>Some text in the MD file abot prject 2</div>
-
+<p>Currently under development.</p>
+<p>Compiled a comprehensive database comprising over 11,200 Chinese characters and 2,200 Chinese idioms</p>
+<img src="/src/content/images/hanzi.png" alt="Project Image" style="width:700px">

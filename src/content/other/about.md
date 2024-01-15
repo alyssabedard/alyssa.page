@@ -3,13 +3,15 @@ layout: ../../layouts/AboutMDLayout.astro
 title: "About:"
 
 # image:
+# Note: add article I like
 ---
 
 
 ### Table of Contents
 [Language Learning Resources](#language-learning-resources)  
+[Macintosh and Internet Games of My Childhood](#macintosh-and-internet-games-of-my-childhood)   
 [Products I Like](#products-i-like)   
-[Macintosh and Internet Games of My Childhood](#games-of-my-childhood)
+
 
 ---
 
@@ -19,19 +21,10 @@ title: "About:"
 
 ---
 
+### Macintosh and Internet Games of my Childhood
+MacOS and online computer games of my childhood that made me love the internet.  The game music of Cave Dig 3 and Monkey Shines have been stuck in my head since the <b>2000s</b>. 
 
-### Products I Like
-- [Things3](https://culturedcode.com/things/)
-- [Obsidian](https://obsidian.md/)
-- [Notion](https://www.notion.so/)
-- [Fantastical](https://flexibits.com/fantastical) 
-- [Anki](https://apps.ankiweb.net/) 
-- [Pleco](https://www.pleco.com/)
-
----
-
-### Games of my Childhood
-MacOS and online computer games of my childhood that made me love the internet.  The game music of Cave Dig 3 and Monkey Shines have been stuck in my head since the <b>2000s</b>
+Played on an Apple Macintosh iMac G3, in the color Indigo.
 
 - [Monkey Shines - Fantasoft Games](https://www.youtube.com/watch?v=VY7g394GI3E&t=28s)
 - [Spooked - Monkey Shines (1997) Soundtrack](https://www.youtube.com/watch?v=v_suegkflOw)
@@ -41,9 +34,20 @@ MacOS and online computer games of my childhood that made me love the internet. 
 - [Adibou - Coktel Vision](https://www.youtube.com/watch?v=WVBTl9jtCkg)
 - [Good Night Mr Snoozleberg - Sarbakan](https://archive.org/details/snoozleberg)
 - [La Foire au Mystère 1 et 2 - Sarbakan, Radio Canada Jeunesse](https://archive.org/details/la-foire-aux-mysteres-3)
-- [Les Quêtes de Sagwa -Sagwa The Chinese Siamese Cat Forbidden City](https://www.youtube.com/watch?app=desktop&v=osiWfIhAgGo)
+- [Les Quêtes de Sagwa/Sagwa, the Chinese Siamese Cat - Radio Canada Jeunesse?](https://www.youtube.com/watch?app=desktop&v=osiWfIhAgGo)
 - [Bugdom - Pangea Software, Inc.](https://www.pangeasoft.net/bug/index.html)
 - [Nanosaur - Pangea Software, Inc.](https://www.pangeasoft.net/nano/info.html)
 - [Cro-Mag Rally - Pangea Software, Inc.](https://www.pangeasoft.net/cromag/demo.html)
 - [Myscene - Mattel](https://en.wikipedia.org/wiki/My_Scene)
 - [Escape From Detention - Bitcasters Production(Social Game Universe)](https://www.youtube.com/watch?v=CXiWW0sSYxM)
+
+
+---
+
+### Products I Like
+- [Things3](https://culturedcode.com/things/)
+- [Obsidian](https://obsidian.md/)
+- [Notion](https://www.notion.so/)
+- [Fantastical](https://flexibits.com/fantastical) 
+- [Anki](https://apps.ankiweb.net/) 
+- [Pleco](https://www.pleco.com/)
