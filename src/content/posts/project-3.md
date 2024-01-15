@@ -14,4 +14,4 @@ project:
 <p>Compiled a comprehensive database comprising over 11,200 Chinese characters and 2,200 Chinese idioms</p>
 
 <!-- Shows on MD file, but not localhost. -->
-<img src="../images/hanzi.png" alt="Project Image" style="width:700px">
+<img src="https://www.images.alyssabedard.com/hanzi.png" alt="Project Image1" style="width:700px">
