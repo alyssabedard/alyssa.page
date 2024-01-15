@@ -17,13 +17,13 @@ Team of 6
 <p>Built a Neo4j knowledge graph database (124k nodes and ~68M relationships), a Next.js front-end UI featuring a search function, a Django backend supporting API calls and data collection and ingestion.</p>
 
 <p>More details and pictures on Github.</p>
-
 <img src="/src/content/images/search1.png" alt="Project Image1" style="width:300px">
 <img src="/src/content/images/result1.png" alt="Project Image2" style="width:300px">
-<img src="/src/content/images/kg.png" alt="Project Image3" style="width:300px">
+<img src="/src/content/images/kg.png" alt="Project Image4" style="width:300px">
 
 
 <style>
+
     /* To refactor... */
 
     @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
