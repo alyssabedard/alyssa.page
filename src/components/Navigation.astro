@@ -1,5 +1,5 @@
 ---
-// import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+// Navigation and Menu
 ---
 <div class="nav-box">
   <nav class="container centered-nav">
@@ -10,117 +10,63 @@
       </ul>
   </nav>
 </div>
-<!-- </body> -->
+
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,900&display=swap');
 
+  .centered-nav {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+  }
 
+  .centered-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,900&display=swap'); */
-.centered-nav {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  
-}
+  .centered-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+  }
 
-.centered-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Adjust the margin top as per your requirement */
-}
+  .centered-nav li {
+      margin: 0 15px;
+  }
 
-.centered-nav ul {
+  .centered-nav a {
+      text-decoration: none;
+      color: #333;
+  }
+
+  ul {
     list-style: none;
+    margin: 0;
     padding: 0;
-    display: flex;
-}
+  }
 
-.centered-nav li {
-    margin: 0 15px; /* Adjust the margin between each link */
-}
+  li {
+    display: inline-block;
+    padding: 0 20px;
+  }
 
-.centered-nav a {
-    text-decoration: none;
-    color: #333; /* Set your preferred link color */
-}
+  span {
+    position: relative;
+    display: block;
+    cursor: pointer;
 
+  } 
 
-
-
-
-
-/* text decoration hover source: https://codepen.io/tsimenis/pen/BKdENX */
-
-
-/* .container {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 600px;
-} */
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-span {
-  position: relative;
-  display: block;
-  cursor: pointer;
-
-} 
-
-
-
-a:link { text-decoration: none; color: black;}
-a:visited { text-decoration: none;color: black; }
-a:hover { 
-  text-decoration: none;
-  /* text-decoration: line-through;  */
-   /* text-decoration-thickness: 3px; */ } 
- a:active { text-decoration: none; color: black; }  
-
-span:before, span:after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  top: 50%;
-  margin-top: -0.5px;
-  background: purple;
-}
-
-span:before {
-  left: -2.5px;
-}
-span:after {
-  right: 2.5px;
-  background: purple;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-span:hover:before {
-  background: purple;
-  width: 100%;
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-  text-decoration: line-through;
-  text-decoration-thickness: 3px;
-}
-
-span:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-}
-
+  a:link { text-decoration: none; color: black;}
+  a:visited { text-decoration: none;color: black; }
+  a:hover { 
+    background:  #efdefc;
+    text-decoration: line-through;
+    text-decoration-thickness: 3px; } 
+  a:active { text-decoration: none; color: black; }  
 
 </style>

@@ -1,51 +1,73 @@
 ---
-// import { getCollection, getEntry } from "astro:content";
-// const blogPosts = await getCollection("blog");
+import ProjectLinks from "./ProjectLinks.astro";
+// import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	date: string;
 	summary: string;
-    stack: string | undefined;
-    tags: string | undefined;
-    image: string | undefined;
-    body: string;
-    slug: string;
-    url: string | undefined;
-    // entry: object;
-    
+  image: string | undefined; 
+  project: object;
+  stack: string[] | undefined;
+  tags: string[];
+  url: string | undefined;
+  isMoreDetail: boolean;
+  body: string;
+  slug: string;    
 }
-// const { bullet } = Astro.props
-const {  title, date, summary, stack, tags, image, body, slug, url} = Astro.props;
+
+const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail, project} = Astro.props;
 ---
 
+<div class="wrapper home">
+    <div class="collapsible-projects">
+        <span class="project-date">{date}</span>
+        <details>
+            <summary>
+                <span  class="project-title">{title}</span>
+                <div class="project-stack">{tags} | {stack}</div>
+            </summary>
 
-        <div class="wrapper home">
-            <div class="collapsible-projects">
-                <span class="project-date">{date}</span>
-                <details>
-                    <summary>
-                        <span class="project-title">{title}</span>
-                        <div class="project-stack">{tags} | {stack}</div>
-                    </summary>
-                    <div class="project-content">
-                        <a href={`/posts/${slug}`}>Click here for me details on this project</a>
-                        <p>{body}</p>
-                        <p>{image}</p>
-                        <p>Summary:{summary}</p>
-                        <a href={url}  target="_blank">{url}</a>
-                        ADD PROJECT LINKS (git hub) with a component
-                        
-                    </div>
-                </details>
+            <div class="project-content">
+              <p>{summary}</p>
+
+              {/* If project has more details show the page link and hide the body content 
+                  else show the body of the MD file */}
+              {isMoreDetail ?
+                <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
+                : <Fragment set:html={body} />
+              }
+              <br>
+              {/* Renders image, if image field not empty */}
+              {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
+              
+              {/* Renders project link, if url field not empty */}
+              <!-- <a class="project-url" href={url}  target="_blank">{url}</a> -->
+              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
+              
             </div>
-        </div>
-
-
+        </details>
+    </div>
+</div>
 
 <style>
  
     @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-    
+
+    .project-url {
+      color: white;
+    }
+    hr {border: 1px solid white;}
+
+    a:link { 
+      text-decoration-line: underline;
+      color: black;}
+    a:visited { text-decoration: none;color: black; }
+    a:hover { 
+      background:  #efdefc;
+      text-decoration: line-through;
+      text-decoration-thickness: 1px; } 
+    a:active { text-decoration: none; color: black; }  
     
     .wrapper {
       min-height: var(--wrapper-height);
@@ -55,7 +77,7 @@ const {  title, date, summary, stack, tags, image, body, slug, url} = Astro.prop
     .wrapper {
         margin: 1rem !important;
         /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
-      }
+    }
     .home {
       justify-content: left;
     }
@@ -63,25 +85,24 @@ const {  title, date, summary, stack, tags, image, body, slug, url} = Astro.prop
         font-family: 'DM Serif Display', serif;
         font-size: 19px;
     }
-    
     .project-content {
         font-family: 'Roboto', sans-serif;
     }
     .project-stack {
         font-family: 'Roboto', sans-serif;
         font-style: italic;
-        font-size: 15px;
+        font-size: 14px;
     }
     .project-date {
         font-family: 'Roboto', sans-serif;
-        font-size: 14px;
+        font-size: 13px;
     }
     .collapsible-experiences, .collapsible-projects {
-      background-color: #fce49f;
+      /* background-color: #fce49f; */
       color: black;
       cursor: pointer;
       padding: 18px;
-      width: 100%;
+      /* width: 100%; */
       border: none;
       border-radius: 0;
       text-align: left;
@@ -89,27 +110,18 @@ const {  title, date, summary, stack, tags, image, body, slug, url} = Astro.prop
       font-size: 15px;
     
     }
-    
     .collapsible-projects {
       background-color: #efdefc;
     
     }
-    .experience-content, .project-content {
-      margin: 10px;
-    }
-    summary {
-      /* font-family: var(--font-pixel); */
-      
+
+    summary {      
       font-size: 25px;
       list-style-type: '[+] ';
     }
-    
+
     details[open] > summary {
       list-style-type: '[−] ';
     }
     
-    
-    
-    
-    
-    </style>
+</style>

@@ -1,0 +1,15 @@
+---
+// Layout for the Markdown project pages inside `content/posts`
+
+// import BaseLayout from './MainLayout.astro';
+const {frontmatter} = Astro.props;
+---
+
+<!-- ... -->
+<!-- <h1>{frontmatter.title}</h1> -->
+<h2>Post author: {frontmatter.summary}</h2>
+<p>{frontmatter.description}</p>
+<slot /> <!-- Markdown content is injected here -->
+  <!-- ... -->
+ 
+

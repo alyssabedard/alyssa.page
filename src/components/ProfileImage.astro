@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+// import profileImage from '../content/images/IMG_1365.png';
+const profileImage = 'https://www.images.alyssabedard.com/IMG_1365.png'
+
+---
+
+<div class="center">
+    <Image 
+        src={profileImage} 
+        alt="Alyssa sitting in front of Machintosh computer."
+        width="450"
+        height="300"
+        decoding="async"
+        loading="lazy"
+    />
+</div>
+
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>

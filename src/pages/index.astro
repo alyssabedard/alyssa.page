@@ -1,29 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import ContentHome from '../content/other/home.md';
+import Navigation from '../components/Navigation.astro';
+import ProfileImage from '../components/ProfileImage.astro'
+import SocialLinks from '../components/SocialLinks.astro'
 ---
 
-<Layout title="Alyssa Bédard">
+<MainLayout title="Alyssa Bédard">
+	
 	<main id="index-page">
-		<h1 id="intro-heading">Bonjour 你好, I'm <span class="text-gradient">Alyssa</span>! ^^</h1>
+		<h1 id="intro-heading">你好 Bonjour, I'm <span class="text-gradient">Alyssa</span>! ^^</h1>
+		<ProfileImage />
 		<ContentHome />
+		<SocialLinks />
 		
 	</main>
-</Layout>
+</MainLayout>
 
  <style>
- @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
- .text-gradient {
-	background-image: var(--accent-gradient);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 400%;
-	background-position: 0%;
-}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
 
-#intro-heading {
-	font-family: 'DM Serif Display', serif;
-	font-size: 40px;
-}
+	#intro-heading {
+		font-family: 'DM Serif Display', serif;
+		font-size: 40px;
+	}
 </style>

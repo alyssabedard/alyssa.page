@@ -1,19 +1,21 @@
 ---
+layout: ../../layouts/ProjectMDLayout.astro
 title: "Project 1"
 date: "Jan. 2023 - May 2023"
-summary: "Summary project 1 blalblabla
-- ads
-"
-stack: "Docker"
-tags: "Technical"
-url: "https://github.com/team-gradvek/gradvek"
+summary: "This is summary of project1"
+project:
+    stack:  ["Astro", "Next.JS"]
+    tags:   ["Technical"]
+    url: "https://github.com/team-gradvek/gradvek"
+    isMoreDetail: true
 # image:
----
 
-# THIS IS PROJECT 1 ()
+---
+# TITLE TO TEST MD
+<h3>Project <h3>
 <div>HERE IS A DIV</div>
 
-roject 1 description hfdshfdkjsh jfhskjfh
+<p>roject 1 description hfdshfdkjsh jfhskjfh</p>
 hfdjsfhskjhfks dkj
 ### fdfd
 fdsfkjhskd

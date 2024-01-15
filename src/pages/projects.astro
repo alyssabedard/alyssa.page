@@ -1,34 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getCollection, getEntry} from "astro:content";
-import ProjectCard from '../components/ProjectCard.astro';
-const ProjectPosts = await getCollection("posts");
-
-// const { slug } = Astro.props;
-// const entry = await getEntry('posts', slug);
-// const { Content } = await entry.render();
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectsCollection from '../components/ProjectsCollection.astro'
 ---
 
-<Layout title="Projects | Alyssa Bédard">
+<MainLayout title="Projects | Alyssa Bédard">
 	<main id="projects-page">
-
 	  <h2>Projects</h2>
-    <div id="all-project-cards">
-      {
-        ProjectPosts.map((post) => (
-            <ProjectCard 
-                title={post.data.title}
-                date={post.data.date}
-                summary={post.data.summary}
-                stack={post.data.stack}
-                tags={post.data.tags}
-                image={post.data.image}
-                body={post.body}
-                slug={post.slug}
-                url={post.data.url}
-            />
-        ))
-      }
-    </div>
+    <ProjectsCollection />
 	</main>
-</Layout>
+</MainLayout>
+
+<style>
+  h2 {
+    font-family: 'DM Serif Display', serif;
+  }
+</style>

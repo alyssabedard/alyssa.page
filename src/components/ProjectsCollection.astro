@@ -1,0 +1,26 @@
+---
+import { getCollection, getEntry} from "astro:content";
+import ProjectCard from '../components/ProjectCard.astro';
+const ProjectPosts = await getCollection("posts");
+
+---
+
+<div id="all-project-cards">
+    {
+      ProjectPosts.map((post) => (
+          <ProjectCard 
+              title={post.data.title}
+              date={post.data.date}
+              summary={post.data.summary}
+              project={post.data.project}
+              image={post.data.image}
+              stack={post.data.project.stack}
+              tags={post.data.project.tags}
+              url={post.data.project.url}
+              isMoreDetail={post.data.project.isMoreDetail}
+              body={post.body}
+              slug={post.slug}
+          />
+      ))
+    }
+</div>

@@ -1,20 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import ContentAbout from '../content/other/about.md';
-
-import { getEntry } from 'astro:content';
-
-
-
-
-
+import SocialLinks from '../components/SocialLinks.astro'
 ---
 
-<Layout title="About | Alyssa Bédard">
+<MainLayout title="About | Alyssa Bédard">
     <main id="about-page">
         <h2>About</h2>
-        <ContentAbout />
-        <!-- <Content /> -->
-        
+        <SocialLinks />
+        <br>
+        <p id="resume-link">📑 Updated <b>Résumé</b> & <b>Recommendation Letter</b> (Jan 15, 2023):
+            <i>
+                <a id="dropbox" href="https://www.dropbox.com/scl/fo/o2f8zgxrut4xi7pffzl73/h?rlkey=9ymsjchhzurc0r2itllgthr1o&dl=0" target="_blank"><b>Dropbox Link</b></a>
+                <br><span>(Password can be found on my résumé)</span>
+            </i>
+        </p>
+        <div>
+            <ContentAbout />
+        </div>
     </main>
-</Layout>
+</MainLayout>
+
+<style>
+    #about-page {
+        font-family: 'DM Serif Display', serif;
+    }
+    h2 {
+        font-family: 'DM Serif Display', serif;
+    }
+    #resume-link {
+        border: 1px;
+        border-style: solid;
+        border-color: #efdefc;
+        background-color: #efdefc;
+        font-size: 15px;
+    }
+    #dropbox {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        text-decoration: underline;
+
+    }
+    
+</style>
