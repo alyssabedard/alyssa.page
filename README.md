@@ -1,8 +1,8 @@
 ## Readme
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-Curently building a personal website with Astro. ✨
-
+Curently building a personal website template with Astro. ✨
+www.alyssabedard.com
 
 
 ##  Astro Commands
