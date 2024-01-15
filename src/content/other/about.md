@@ -51,3 +51,8 @@ Played on an Apple Macintosh iMac G3, in the color Indigo.
 - [Fantastical](https://flexibits.com/fantastical) 
 - [Anki](https://apps.ankiweb.net/) 
 - [Pleco](https://www.pleco.com/)
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+</style>    

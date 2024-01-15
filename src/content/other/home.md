@@ -12,6 +12,9 @@ title: "About:"
 </div>
 
 <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
     .centered-links {
         /* display: flex; */
         justify-content: center;
