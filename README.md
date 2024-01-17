@@ -2,7 +2,7 @@
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
 👩🏻‍💻 Currently under development.  
-Personal website built with Astro. ✨ (Not yet web responsive)
+Personal website built with Astro.
 
 www.alyssabedard.com
 

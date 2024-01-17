@@ -11,4 +11,4 @@ project:
 ---
 
 <p>Currently under development.</p>
-<p>Compiled a comprehensive database comprising over 11,200 Chinese characters and 2,200 Chinese idioms</p>
+

@@ -8,7 +8,7 @@ title: "About:"
 </div>
 <div class="centered-links">
     <span class="text-home-project">For technical and non-technical projects:<a href="/projects/">Projects</a><br></span>
-    <span class="text-home-project">For recommendation letters, my résumé and contact info: <a href="/about/">About</a></span><br>
+    <span class="text-home-project">For language learning resources, recommendation letters and contact info: <a href="/about/">About</a></span><br>
 </div>
 
 <style>
