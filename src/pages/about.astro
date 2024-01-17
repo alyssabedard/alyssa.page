@@ -5,13 +5,13 @@ import SocialLinks from '../components/SocialLinks.astro'
 ---
 
 <MainLayout title="About | Alyssa Bédard">
-    <main id="about-page">
+    <main id="about-main">
         <h2>About</h2>
         <SocialLinks />
         <br>
-        <p id="resume-link">👩🏻‍💻 Updated <b>Résumé</b> & <b>Recommendation Letters</b>:
+        <p id="about-resume-link">👩🏻‍💻 Updated <b>Résumé</b> & <b>Recommendation Letters</b>:
             <i>
-                <a id="dropbox" href="https://www.dropbox.com/scl/fo/o2f8zgxrut4xi7pffzl73/h?rlkey=qfj9umkhkbn5kex9vmjsctmr9&dl=0" target="_blank"><b>Dropbox Link</b></a>
+                <a id="about-dropbox-link" href="https://www.dropbox.com/scl/fo/o2f8zgxrut4xi7pffzl73/h?rlkey=qfj9umkhkbn5kex9vmjsctmr9&dl=0" target="_blank"><b>Dropbox Link</b></a>
                 <br><span>(Password can be found on my résumé)</span>
             </i>
         </p>
@@ -23,21 +23,21 @@ import SocialLinks from '../components/SocialLinks.astro'
 
 <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-    #about-page {
+    
+    #about-main {
         font-family: 'DM Serif Display', serif;
     }
     h2 {
         font-family: 'DM Serif Display', serif;
     }
-    #resume-link {
+    #about-resume-link {
         border: 1px;
         border-style: solid;
         border-color: #efdefc;
         background-color: #efdefc;
         font-size: 15px;
     }
-    #dropbox {
+    #about-dropbox-link {
         color: black;
         font-family: 'Roboto', sans-serif;
         font-size: 15px;

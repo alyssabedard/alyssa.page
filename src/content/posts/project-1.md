@@ -30,7 +30,6 @@ Team of 6
 
     /* To refactor... */
 
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
     a:link { 
       text-decoration-line: underline;

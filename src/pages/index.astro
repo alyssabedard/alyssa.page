@@ -1,14 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ContentHome from '../content/other/home.md';
-import ProfileImage from '../components/ProfileImage.astro'
-import SocialLinks from '../components/SocialLinks.astro'
+import ProfileImage from '../components/ProfileImage.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
 ---
 
 <MainLayout title="Alyssa Bédard">
 	
-	<main id="index-page">
-		<h1 id="intro-heading">你好 Bonjour, I'm <span class="text-gradient">Alyssa</span>! ^^</h1>
+	<main id="index-main">
+		<h1 id="index-page_intro-header">你好 Bonjour, I'm <span class="text-gradient">Alyssa</span>! ^^</h1>
 		<ProfileImage />
 		<ContentHome />
 		<SocialLinks />
@@ -18,7 +19,6 @@ import SocialLinks from '../components/SocialLinks.astro'
 
  <style>
 	
-	@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -28,8 +28,8 @@ import SocialLinks from '../components/SocialLinks.astro'
 		background-position: 0%;
 	}
 
-	#intro-heading {
-		font-family: 'DM Serif Display', serif;
+	#index-page_intro-header {
+		/* font-family: 'DM Serif Display', serif; */
 		font-size: 40px;
 	}
 </style>
