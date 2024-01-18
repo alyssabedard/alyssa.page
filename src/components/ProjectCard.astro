@@ -19,7 +19,7 @@ interface Props {
 const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail, project} = Astro.props;
 ---
 
-<div class="wrapper home">
+<div id="project-card" class="wrapper home">
     <div class="collapsible-projects">
         <span class="project-date">{date}</span>
         <details>
@@ -107,11 +107,19 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
       background-color: var(--color-lilac);
     
     }
-    summary {      
+    /* Doesn't render in production when not global */
+    #project-card :global(summary) {
       font-size: 25px;
       list-style-type: '[+] ';
     }
-    details[open] > summary {
+    #project-card :global(details[open] > summary) {
       list-style-type: '[−] ';
     }
+    /* summary {      
+      font-size: 25px;
+      list-style-type: '[+] ';
+    } */
+    /* details[open] > summary {
+      list-style-type: '[−] ';
+    } */
 </style>
