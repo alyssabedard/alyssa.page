@@ -107,19 +107,12 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
       background-color: var(--color-lilac);
     
     }
-    /* Doesn't render in production when not global */
-    /* #project-card :global(summary) {
+    /* Doesn't render on Safari */
+    summary {      
       font-size: 25px;
       list-style-type: '[+] ';
     }
-    #project-card :global(details[open] > summary) {
+    details[open] > summary {
       list-style-type: '[−] ';
-    } */
-    /* summary {      
-      font-size: 25px;
-      list-style-type: '[+] ';
-    } */
-    /* details[open] > summary {
-      list-style-type: '[−] ';
-    } */
+    }
 </style>
