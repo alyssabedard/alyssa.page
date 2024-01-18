@@ -6,7 +6,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
-
+summary {      
+    font-size: 25px;
+    list-style-type: '[+] ';
+}
+details[open] > summary {
+    list-style-type: '[−] ';
+}
 :root {
     --color-lilac:  #efdefc;
     --font-header: 'DM Serif Display', serif;
