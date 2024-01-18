@@ -2,18 +2,18 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import ContentAbout from '../content/other/about.md';
 import SocialLinks from '../components/SocialLinks.astro'
+
+const dropboxLink = 'https://www.dropbox.com/scl/fo/o2f8zgxrut4xi7pffzl73/h?rlkey=qfj9umkhkbn5kex9vmjsctmr9&dl=0'
 ---
 
 <MainLayout title="About | Alyssa Bédard">
-    <main id="about_main">
+    <main>
         <h2>About</h2>
         <SocialLinks />
         <br>
-        <p id="about-resume-link">👩🏻‍💻 Updated <b>Résumé</b> & <b>Recommendation Letters</b>:
-            <i>
-                <a id="about-dropbox-link" href="https://www.dropbox.com/scl/fo/o2f8zgxrut4xi7pffzl73/h?rlkey=qfj9umkhkbn5kex9vmjsctmr9&dl=0" target="_blank"><b>Dropbox Link</b></a>
-                <br><span>(Password can be found on my résumé)</span>
-            </i>
+        <p id="resume-link">👩🏻‍💻 Updated <b>Résumé</b> & <b>Recommendation Letters</b>:
+            <i><a id="dropbox-link" href={dropboxLink} target="_blank"><b>Dropbox Link</b></a>
+            <br><span>(Password can be found on my résumé)</span></i>
         </p>
         <div>
             <ContentAbout />
@@ -22,27 +22,16 @@ import SocialLinks from '../components/SocialLinks.astro'
 </MainLayout>
 
 <style>
-
-    
-    #about-main {
-        font-family: 'DM Serif Display', serif;
-    }
-    h2 {
-        font-family: 'DM Serif Display', serif;
-    }
-    #about-resume-link {
+    #resume-link {
         border: 1px;
         border-style: solid;
-        border-color: #efdefc;
-        background-color: #efdefc;
+        border-color: var(--color-lilac);
+        background-color: var(--color-lilac);
         font-size: 15px;
     }
-    #about-dropbox-link {
+    #dropbox-link {
         color: black;
-        font-family: 'Roboto', sans-serif;
         font-size: 15px;
         text-decoration: underline;
-
     }
-    
 </style>

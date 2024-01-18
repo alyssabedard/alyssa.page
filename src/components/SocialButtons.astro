@@ -20,28 +20,17 @@ const { platform, url} = Astro.props;
 }
 
 <style>
-  .e-mail:before {
-  content: "\0061\006C\0079\0073\0073\0061\002E\0062\0065\0064\0061\0072\0064\0040\006F\0075\0074\006C\006F\006F\006B\002E\0063\006F\006D";
-  }
     #notion {
-      /* padding: 7px;
-      font-size: 17px;
-      width: 9px;
-      text-decoration: none;
-      margin: 1px 1px;
-      border-radius: 50%; */
       font-size: 16px;
       width: 17px;
     } 
- 
     a {
-      /* padding: 0.5rem 1rem; */
       color: white;
-      background-color: #efdefc;
+      background-color: var(--color-lilac);
       text-decoration: none;
     }
     .fa-github, .fa-envelope, .notion {
-        background: #efdefc;
+        background: var(--color-lilac);
         color: white;
     }
     .fa {
@@ -52,14 +41,9 @@ const { platform, url} = Astro.props;
         text-decoration: none;
         margin: 5px 2px;
         border-radius: 50%;
-
-        /* height: 25px;
-        margin-left: 10px;
-        vertical-align: top; */
     }
     .fa:hover, .notion:hover {
-        background:  #efdefc;
+        background:  var(--color-lilac);
         color: black;
-        /* color: #efdefc; */
     }
 </style>

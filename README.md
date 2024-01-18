@@ -1,10 +1,12 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-👩🏻‍💻 Currently under development.  
+Currently under development. 👩🏻‍💻    
 Personal website built with Astro.
 
-www.alyssabedard.com
+[alyssabedard.com](https://alyssabedard.com)
+
+[alyssa.page](https://alyssabedard.com)
 
 
 ##  Astro Commands

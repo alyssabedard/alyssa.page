@@ -5,30 +5,22 @@ const {frontmatter} = Astro.props;
 ---
 
 <!-- <h1> {frontmatter.title}</h1> -->
-<div id="about-page-md">
+<div id="markdown-page">
     <slot /> <!-- Markdown content is injected here -->
 </div>
 
 <style>
-    
-    
     /* Scoped to this component, only. */
-    h1 {border: 1px solid #efdefc;}
+    /* Insert here */
 
     /*  Mixed: Applies to child `tags` elements only. 
         Styling for Markdown elements inside <slot/> */
-    #about-page-md :global(h1,h2,h3) {
+    #markdown-page :global(li,p) {
         color: black;
-        font-family: 'DM Serif Display', serif;
-    }
-
-    #about-page-md :global(li,p) {
-        color: black;
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-text);
         font-size: 14px;
     }
-
-    #about-page-md
+    #markdown-page
         /* Links */ 
         :global(a:hover) {
             background:  #efdefc;
@@ -43,7 +35,6 @@ const {frontmatter} = Astro.props;
         :global(a:link) {
             text-decoration: none; color: black;
         }
-  
 </style>
 
 

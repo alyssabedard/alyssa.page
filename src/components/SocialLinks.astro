@@ -1,26 +1,26 @@
 ---
 import Socials from './SocialButtons.astro';
 ---
+<div>
+    <span id="find-me">Find me on:</span>
 
-<span id="find-me">Find me on:</span>
-{/*Encoded Email Address */}
-<Socials
-    platform="mail"
-    url="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#98;&#51;&#54;&#55;&#56;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
-/>
-<Socials
-    platform="github" 
-    url="https://github.com/alyssabedard"
-/>
-<Socials
-    platform="notion" 
-    url="https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4"
-/>
+    {/*Encoded Email Address */}
+    <Socials
+        platform="mail"
+        url="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#98;&#51;&#54;&#55;&#56;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+    />
+    <Socials
+        platform="github" 
+        url="https://github.com/alyssabedard"
+    />
+    <Socials
+        platform="notion" 
+        url="https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4"
+    />
+</div>
 
 <style>
-
-    
     #find-me {
-        font-family: 'DM Serif Display', serif;
+        font-family: var(--font-header);
     }
 </style>

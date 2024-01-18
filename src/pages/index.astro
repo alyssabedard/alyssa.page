@@ -7,29 +7,22 @@ import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <MainLayout title="Alyssa Bédard">
-	
-	<main id="index-main">
-		<h1 id="index-page_intro-header">你好 Bonjour, I'm <span class="text-gradient">Alyssa</span>! ^^</h1>
+	<main>
+		<h1>你好 Bonjour, I'm 
+			<span class="text-gradient">Alyssa</span>! ^^
+		</h1>
 		<ProfileImage />
 		<ContentHome />
 		<SocialLinks />
-		
 	</main>
 </MainLayout>
 
  <style>
-	
-
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-
-	#index-page_intro-header {
-		/* font-family: 'DM Serif Display', serif; */
-		font-size: 40px;
 	}
 </style>

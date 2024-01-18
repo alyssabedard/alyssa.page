@@ -29,7 +29,6 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
             </summary>
 
             <div class="project-content">
-
               {/* Renders project link, if url field not empty */}
               <!-- <a class="project-url" href={url}  target="_blank">{url}</a> -->
               <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
@@ -45,17 +44,12 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
               <br>
               {/* Renders image, if image field not empty */}
               {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
-              
-              
-              
             </div>
         </details>
     </div>
 </div>
 
 <style>
- 
-
     .project-url {
       color: white;
     }
@@ -66,11 +60,11 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
       color: black;}
     a:visited { text-decoration: none;color: black; }
     a:hover { 
-      background:  #efdefc;
+      background:  var(--color-lilac);
       text-decoration: line-through;
       text-decoration-thickness: 1px; } 
     a:active { text-decoration: none; color: black; }  
-    
+
     .wrapper {
       min-height: var(--wrapper-height);
       place-items: center;
@@ -84,46 +78,40 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
       justify-content: left;
     }
     .project-title {
-        font-family: 'DM Serif Display', serif;
+        font-family: var(--font-header);
         font-size: 19px;
     }
     .project-content {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-text);
     }
     .project-stack {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-text);
         font-style: italic;
         font-size: 14px;
     }
     .project-date {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-text);
         font-size: 13px;
     }
     .collapsible-experiences, .collapsible-projects {
-      /* background-color: #fce49f; */
       color: black;
       cursor: pointer;
       padding: 18px;
-      /* width: 100%; */
       border: none;
       border-radius: 0;
       text-align: left;
       outline: none;
       font-size: 15px;
-    
     }
     .collapsible-projects {
-      background-color: #efdefc;
+      background-color: var(--color-lilac);
     
     }
-
     summary {      
       font-size: 25px;
       list-style-type: '[+] ';
     }
-
     details[open] > summary {
       list-style-type: '[−] ';
     }
-    
 </style>

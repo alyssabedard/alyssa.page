@@ -8,9 +8,8 @@ const { platform, url } = Astro.props;
 }
 
 <style>
-  
     .fa-github, .fa-envelope {
-        background: #efdefc;
+        background: var(--color-lilac);
         color: black;
     }
     .fa {
@@ -21,15 +20,9 @@ const { platform, url } = Astro.props;
         text-decoration: none;
         margin: 5px 2px;
         border-radius: 50%;
-        /* font-size: 30px;
-        width: 50px;
-        text-align: center;
-        text-decoration: none;
-        margin: 5px 2px;
-        border-radius: 15%; */
     }
     .fa:hover {
-        background:  #efdefc;
+        background:  var(--color-lilac);
         color: white;
-        /* color: #efdefc; */
     }
+</style>    
