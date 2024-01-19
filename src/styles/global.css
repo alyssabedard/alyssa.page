@@ -22,34 +22,34 @@
         white 60%
     );
 }
-html {
-    /* font-family: system-ui, sans-serif; */
+body {
+        
+        margin: 0;
+        padding: 0;
+        min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+        /* display: flex; */
+        flex-direction: column;
+}
+main {
+    /* margin-top: 100px;  */
+    margin: auto;
+    padding: auto;
+    max-width: 900px;
+    /* width: 800px;
+    max-width: calc(100% - 2rem);
+    color: black;
+    font-size: 20px;
+    line-height: 1.6; */
+}
+/* html {
+
     background: white;
     background-size: 224px;
     font: var(--font-text);
 }
-nav {
-      margin-bottom: auto;
-}
+
 body {
-    /* TO FIX  !! */
-
-    /* with this code it fits on screen */
-    /* min-height: 100vh;
-    display: flex;
-    flex-direction: column; */
-
-    /* with this line instead doesnt fit window it overlaps, 
-    but doesnt have div moving */
-    /* display: table; 
-
-    margin: auto;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background: white;*/
-    
+   
     font-size: 20px;
     font-weight: 300; 
     color: black;
@@ -87,14 +87,15 @@ footer {
     margin-top: 2rem;
     background-color: #333;
 }
-
+*/
 img, svg {
-      /* margin-block: 2.5rem; */
-      border-radius: 0.75rem;
+      /* border-radius: 0.75rem; */
       width: 100%;
       height: auto;
-      /* overflow:hidden; */
-}
+
+} 
+
+
 /* code {
     font-family:
         Menlo,

@@ -1,0 +1,55 @@
+---
+// https://www.typeitjs.com/
+// https://github.com/alexmacarthur/typeit
+// https://www.typeitjs.com/docs/vanilla/cursor-customization/
+---
+
+<div id="ele">
+    <div id="element"></div>
+</div>
+
+<style>
+
+    /* TO REFACTOR AND CLEAN UP */
+    #element {
+        font-size: 30px;
+        font-weight: 900;
+        /* padding-bottom: 50px; */
+        /* margin: 5px; */
+        /* --ti-cursor-color: var(--color-lilac); */
+        /* color: var(--ti-cursor-color, dodgerblue) */
+        /* --ti-cursor-font-weight: 2000;  */
+    }
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+        #element  {
+            /* text-align: center; */
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        background-color: #f0f0f0;
+        /* color:pink; */
+        }
+  }  
+  
+  
+</style>
+<script>
+    import TypeIt from  '../../node_modules/typeit';
+
+    const zh = "大家好！ 我叫爱丽。～～";
+    const fr = "Bonjour, je m'appelle Alyssa.";
+    const en = "Hi! I'm Alyssa."
+
+    new TypeIt("#element", {
+        speed: 100,
+        waitUntilVisible: true,
+        loop: true,
+    })
+    .type(fr, { delay: 300})
+    .delete(fr.length)
+    .type(zh, { delay: 1200 })
+    .delete(zh.length)
+    .type(en, { delay: 300})
+    .delete(en.length)
+    .go();
+</script>
+

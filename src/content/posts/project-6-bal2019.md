@@ -1,13 +1,15 @@
 ---
+layout: ../../layouts/ProjectMDLayout.astro
 title: "Lead Volunteer for the HEC Montréal Undergraduate Bal 2019 Edition"
 date: "May 2019"
-summary: "Montréal,QC."
+summary: "Managed $45,000 of alcohol and beverages for students and performers. Contributed to the smooth running of the $500,000 3-day event and worked closely with the Fairmont Le Manoir Richelieu hotel staff."
 project:
+    isTechnical: true
     stack:  ["Project Management"]
     tags:   ["Leadership"]
-    # url: "https://github.com/alyssabedard/personal-website"
-    isMoreDetail: false
-# image: "../images/black-heart-pixel.jpeg"
+    # url: ""
+    isMoreDetail: true
+# image: ""
 ---
 
 <p>

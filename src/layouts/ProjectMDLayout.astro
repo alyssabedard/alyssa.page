@@ -5,11 +5,21 @@
 const {frontmatter} = Astro.props;
 ---
 
-<!-- ... -->
-<!-- <h1>{frontmatter.title}</h1> -->
-<h2>Post author: {frontmatter.summary}</h2>
-<p>{frontmatter.description}</p>
+<p><b>Date:</b> {frontmatter.date}</p>
+<p><b>Tags:</b> {frontmatter.project.tags.join(", ")}</p>
+<p>
+  {/* Checks if project is technical */}
+  {frontmatter.project.isTechnical ? <b>Stack:</b> : <b>Type: </b>}
+  {frontmatter.project.stack.join(", ")}
+</p>
+
+  {/* Checks if url */}
+  {frontmatter.project.url ? 
+    <b>URL:</b> <a href={frontmatter.project.url} target="_blank">{frontmatter.project.url}</a> 
+    : ""
+  }
+<hr>
 <slot /> <!-- Markdown content is injected here -->
-  <!-- ... -->
+
  
 

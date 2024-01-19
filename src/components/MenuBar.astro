@@ -1,0 +1,24 @@
+---
+// const { platform, url } = Astro.props;
+const github = "https://github.com/alyssabedard";
+const notion = "https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4";
+---
+
+<ul role="menu-bar">
+
+    <!-- Normal -->
+    <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/">Home</a></li>
+    <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/projects/">Projects</a></li>
+    <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/about/">About</a></li>
+    <!-- <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/alyssabedard">GitHub</a></li> -->
+    <!-- Dropdown -->
+    <li role="menu-item" tabindex="0" aria-haspopup="true">
+        Find Me On
+        <ul role="menu">
+            <!-- <li role="menu-item"><a href="/about/">Contact</a></li> -->
+            <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href={github}>GitHub</a></li>
+            <li role="menu-item" class="divider"><a href={notion} target="_blank">Notion</a></li>
+            <li role="menu-item" ><a href="/about/">Résumé & Recommendation Letters</a></li>
+        </ul>
+    </li>
+</ul>

@@ -1,7 +1,13 @@
 ---
-// Head of main layout
 const {title} = Astro.props;
+
+// CSS
 import '../styles/global.css';
+import '../../node_modules/@sakun/system.css';
+import '../../node_modules/typeit';
+// import TypeIt from  '../../node_modules/typeit';
+// const retroCSS = 'https://unpkg.com/@sakun/system.css';
+const fontAwesome = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
 ---
 
 <head>
@@ -10,7 +16,8 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/black-heart-pixel.jpeg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href={retroCSS}> -->
+    <link rel="stylesheet" href={fontAwesome}/>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <title>{title}</title>
 </head>
