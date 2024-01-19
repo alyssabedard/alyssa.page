@@ -1,25 +1,35 @@
 ---
-// Main Layout
-
 interface Props {
 	title: string;
 }
 const { title } = Astro.props;
 
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
 import MainHead from './MainHead.astro';
+import Footer from '../components/Footer.astro';
+import MenuBar from '../components/MenuBar.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<MainHead title={title}/>
 	<header></header>
-	<nav>
-		<Navigation />
-	</nav>
 	<body>
-		<slot />
+		<main>
+			<div class="window">
+				<div class="title-bar">
+				  <button aria-label="Close" class="close"></button>
+				  <h1 class="title">Hello, World</h1>
+				  <button aria-label="Resize" class="resize"></button>
+				</div>
+				<div class="details-bar">
+				  <MenuBar />
+				</div>
+				<div class="window-pane">
+					<!-- slot -->
+					<slot />
+				</div>
+			</div>
+		</main>
 	</body>
 	<footer>
 		<Footer />
@@ -28,3 +38,4 @@ import MainHead from './MainHead.astro';
 
 <!-- <style is:global>
 </style> -->
+

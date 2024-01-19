@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # other
 .vscode
+
+# files to ignore
+notes.md

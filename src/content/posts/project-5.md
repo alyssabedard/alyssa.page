@@ -1,8 +1,10 @@
 ---
+layout: ../../layouts/ProjectMDLayout.astro
 title: "Memory Allocator in C++"
 date: "September 2022"
 summary: ""
 project:
+    isTechnical: true
     stack:  ["C++"]
     tags:   ["Systems Programming"]
     # url: "https://github.com/alyssabedard/personal-website"

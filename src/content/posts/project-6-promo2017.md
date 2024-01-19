@@ -1,19 +1,22 @@
 ---
+layout: ../../layouts/ProjectMDLayout.astro
 title: "Raised $500,000 for the Second-largest Undergraduate Ball in Canada"
 date: "Jun. 2016 – May 2017"
-summary: "HEC Montréal, Undergraduate Student Association, Comité Promo Transcend (2017)"
+summary: "Collaborated (team of 8) to raise $500,000 for the second-largest undergraduate ball in Canada by organizing more than 30+ events each attracting over 300 participants throughout the year; selected as the Student Association of the Year out of 17 student associations and clubs"
 project:
+    isTechnical: false
     stack:  ["Project Management"]
     tags:   ["Leadership"]
-    # url: "https://github.com/alyssabedard/personal-website"
+    # url: ""
     isMoreDetail: false
-# image: "../images/black-heart-pixel.jpeg"
+# image: ""
 ---
 <a href="https://www.aehec.ca/" target="_blank"> https://www.aehec.ca/ </a><br>   
 
 <a href="https://www.facebook.com/PromoTranscend" target="_blank"> https://www.facebook.com/PromoTranscend </a>
 
 <p>
+HEC Montréal, Undergraduate Student Association, Comité Promo Transcend (2017).
 Collaborated (team of 8) to raise $500,000 for the second-largest undergraduate ball in Canada by organizing more than 30+ events each attracting over 300 participants throughout the year; selected as the Student Association of the Year out of 17 student associations and clubs
 </p>
 <p>

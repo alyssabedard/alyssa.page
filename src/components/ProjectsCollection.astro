@@ -1,6 +1,6 @@
 ---
 import { getCollection} from "astro:content";
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectCard from './ProjectCard.astro';
 const ProjectPosts = await getCollection("posts");
 
 ---
@@ -16,6 +16,7 @@ const ProjectPosts = await getCollection("posts");
               image={post.data.image}
               stack={post.data.project.stack}
               tags={post.data.project.tags}
+              isTechnical={post.data.project.isTechnical}
               url={post.data.project.url}
               isMoreDetail={post.data.project.isMoreDetail}
               body={post.body}

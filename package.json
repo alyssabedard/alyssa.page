@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@sakun/system.css": "^0.1.11",
     "astro": "^4.1.1",
+    "typeit": "^8.8.3",
     "typescript": "^5.3.3"
   }
 }

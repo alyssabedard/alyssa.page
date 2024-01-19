@@ -13,14 +13,12 @@ title: "About:"
 
 <style>
     
-
     .centered-links {
         /* display: flex; */
         justify-content: center;
         align-items: center;
         height: 15vh;
     }
-
     .centered-links a {
         color: #333;
         margin: 0 10px;

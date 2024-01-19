@@ -8,6 +8,7 @@ interface Props {
 	summary: string;
   image: string | undefined; 
   project: object;
+  isTechnical: boolean;
   stack: string[];
   tags: string[];
   url: string | undefined;
@@ -16,7 +17,7 @@ interface Props {
   slug: string;    
 }
 
-const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail, project} = Astro.props;
+const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url, isMoreDetail, project} = Astro.props;
 ---
 
 <div id="project-card" class="wrapper home">
@@ -29,19 +30,18 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
             </summary>
 
             <div class="project-content">
-              {/* Renders project link, if url field not empty */}
-              <!-- <a class="project-url" href={url}  target="_blank">{url}</a> -->
-              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
-
-              <p>{summary}</p>
+             <p>{summary}</p>
 
               {/* If project has more details show the page link and hide the body content 
                   else show the body of the MD file */}
               {isMoreDetail ?
                 <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
-                : <Fragment set:html={body} />
+                : <div id="project-body"><Fragment set:html={body} /></div>
               }
               <br>
+              {/* Renders project link, if url field not empty */}
+              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
+              
               {/* Renders image, if image field not empty */}
               {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
             </div>
@@ -50,6 +50,32 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
 </div>
 
 <style>
+
+    /* TO REFACTOR !!!!!! * /
+
+    /* Scoped to this component, only. */
+    /* Insert here */
+
+    /*  Mixed: Applies to child `tags` elements only. 
+        Styling for Markdown elements inside <slot/> */
+    /* #project-body :global(a:link) {
+      text-decoration-line: underline;
+      color: black;
+    }
+    #project-body :global(a:visited) {
+      text-decoration: none;
+      color: black;
+    }
+    #project-body :global(a:hover ) {
+      background:  #efdefc;
+      text-decoration: line-through;
+      text-decoration-thickness: 1px; 
+    }
+    #project-body :global(a:active) {
+      text-decoration: none; color: black; 
+    } */
+
+
     .project-url {
       color: white;
     }
@@ -86,11 +112,11 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
     }
     .project-stack {
         font-family: var(--font-text);
-        font-style: italic;
         font-size: 14px;
     }
     .project-date {
         font-family: var(--font-text);
+        /* font-style: italic; */
         font-size: 13px;
     }
     .collapsible-experiences, .collapsible-projects {
@@ -107,12 +133,13 @@ const {  title, date, summary, stack, tags, image, body, slug, url, isMoreDetail
       background-color: var(--color-lilac);
     
     }
-    /* Doesn't render on Safari */
+    /* Doesn't work on macos */
+
     summary {      
       font-size: 25px;
       list-style-type: '[+] ';
-    }
+    } 
     details[open] > summary {
       list-style-type: '[−] ';
-    }
+    } 
 </style>

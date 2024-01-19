@@ -2,27 +2,23 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import ContentHome from '../content/other/home.md';
 import ProfileImage from '../components/ProfileImage.astro';
-import SocialLinks from '../components/SocialLinks.astro';
-
+import SocialLinks from '../components/previousUI/SocialLinks.astro';
+import TypeWriter from '../components/TypeWriter.astro'
 ---
 
 <MainLayout title="Alyssa Bédard">
 	<main>
-		<h1>你好 Bonjour, I'm 
-			<span class="text-gradient">Alyssa</span>! ^^
-		</h1>
+		<div id="ab"><TypeWriter /></div><br>
+		<p>Hey, I'm Alyssa. I'm based in MTL and 
+		can connect the technical and business worlds.
+		I'm passionate about language learning, startups, tech,
+		cultivating speech precision and 
+		mastering efficient learning techniques.
+		Oh, and anime.</p>
 		<ProfileImage />
-		<ContentHome />
-		<SocialLinks />
+		<br>
+		Games I played on this Apple Macintosh iMac G3, in Indigo:
+		<button class="btn"><a href="/games/">Here</a></button>
 	</main>
 </MainLayout>
 
- <style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-</style>
