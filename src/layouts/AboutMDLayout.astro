@@ -18,12 +18,12 @@ const {frontmatter} = Astro.props;
     #markdown-page :global(li,p) {
         color: black;
         font-family: var(--font-text);
-        font-size: 14px;
+        font-size: 16px;
     }
     #markdown-page
         /* Links */ 
         :global(a:hover) {
-            background:  #efdefc;
+            background:  var(--color-lilac);
             text-decoration-thickness: 3px; 
         }
         :global(a:visited) {

@@ -35,6 +35,10 @@ main {
     margin: auto;
     padding: auto;
     max-width: 900px;
+    width: 100vw; 
+    height: 100vh !important; 
+    z-index: 1; 
+    max-width: 100%; 
     /* width: 800px;
     max-width: calc(100% - 2rem);
     color: black;

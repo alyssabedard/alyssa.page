@@ -5,15 +5,16 @@
 ---
 
 <div id="ele">
-    <div id="element"></div>
+    <div id="text-animation"></div>
 </div>
 
 <style>
 
     /* TO REFACTOR AND CLEAN UP */
-    #element {
+    #text-animation {
         font-size: 30px;
         font-weight: 900;
+        line-height: 200%;
         /* padding-bottom: 50px; */
         /* margin: 5px; */
         /* --ti-cursor-color: var(--color-lilac); */
@@ -22,7 +23,7 @@
     }
     /* Media query for smaller screens */
     @media only screen and (max-width: 600px) {
-        #element  {
+        #text-animation  {
             /* text-align: center; */
         font-size: 18px; /* Adjust the font size for smaller screens */
         background-color: #f0f0f0;
@@ -39,7 +40,7 @@
     const fr = "Bonjour, je m'appelle Alyssa.";
     const en = "Hi! I'm Alyssa."
 
-    new TypeIt("#element", {
+    new TypeIt("#text-animation", {
         speed: 100,
         waitUntilVisible: true,
         loop: true,
