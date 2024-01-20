@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Chinese Characters Database Supporting CRUD Operations"
 date: "Spring 2022"
 summary: ""

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Developing a Knowledge Graph Framework for Drug Safety Prediction"
 date: "October 2023"
 summary: "Collaborated with teammates and Pfizer's AI/ML Lead to deliver a technical presentation on knowledge graphs for drug safety."

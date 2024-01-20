@@ -1,6 +1,5 @@
 ---
 import ProjectLinks from "./ProjectLinks.astro";
-// import { Image } from 'astro:assets';
 
 interface Props {
 	title: string;
@@ -20,27 +19,27 @@ interface Props {
 const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url, isMoreDetail, project} = Astro.props;
 ---
 
-<div id="project-card" class="wrapper home">
-    <div class="collapsible-projects">
-        <span class="project-date">{date}</span>
+<div id="card" class="wrapper">
+    <div class="collapsible">
+        <div class="date">{date}</div>
         <details>
             <summary>
-                <span  class="project-title">{title}</span>
-                <div class="project-stack">{tags.join(", ")} | {stack.join(", ")}</div>
+                <span  class="title">{title}</span>
+                <div class="stack">{tags.join(", ")} | {stack.join(", ")}</div>
             </summary>
 
-            <div class="project-content">
+            <div class="content">
              <p>{summary}</p>
 
               {/* If project has more details show the page link and hide the body content 
                   else show the body of the MD file */}
               {isMoreDetail ?
                 <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
-                : <div id="project-body"><Fragment set:html={body} /></div>
+                : <div id="body"><Fragment set:html={body} /></div>
               }
               <br>
               {/* Renders project link, if url field not empty */}
-              <div class="link-project">{url && <ProjectLinks platform="github" url={url}  />}</div>
+              <div class="link">{url && <ProjectLinks platform="github" url={url}  />}</div>
               
               {/* Renders image, if image field not empty */}
               {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
@@ -50,76 +49,29 @@ const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url,
 </div>
 
 <style>
-
-    /* TO REFACTOR !!!!!! * /
-
-    /* Scoped to this component, only. */
-    /* Insert here */
-
-    /*  Mixed: Applies to child `tags` elements only. 
-        Styling for Markdown elements inside <slot/> */
-    /* #project-body :global(a:link) {
-      text-decoration-line: underline;
-      color: black;
-    }
-    #project-body :global(a:visited) {
-      text-decoration: none;
-      color: black;
-    }
-    #project-body :global(a:hover ) {
-      background:  #efdefc;
-      text-decoration: line-through;
-      text-decoration-thickness: 1px; 
-    }
-    #project-body :global(a:active) {
-      text-decoration: none; color: black; 
-    } */
-
-
-    .project-url {
-      color: white;
+    .wrapper {
+      margin: 1rem !important;
+      /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
     }
     hr {border: 1px solid white;}
-
-    a:link { 
-      text-decoration-line: underline;
-      color: black;}
-    a:visited { text-decoration: none;color: black; }
-    a:hover { 
-      background:  var(--color-lilac);
-      text-decoration: line-through;
-      text-decoration-thickness: 1px; } 
-    a:active { text-decoration: none; color: black; }  
-
-    .wrapper {
-      min-height: var(--wrapper-height);
-      place-items: center;
-      margin: 1rem 3rem 0;
+    .content, .stack, .date {
+      font-family: var(--font-text);
     }
-    .wrapper {
-        margin: 1rem !important;
-        /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
-    }
-    .home {
-      justify-content: left;
-    }
-    .project-title {
+    .title {
         font-family: var(--font-header);
-        font-size: 19px; 
+        font-size: 19px;
+        line-height: 80%;
     }
-    .project-content {
-        font-family: var(--font-text);
-    }
-    .project-stack {
-        font-family: var(--font-text);
+    .stack {
         font-size: 14px;
+        margin-top: 4px;
     }
-    .project-date {
-        font-family: var(--font-text);
-        /* font-style: italic; */
+    .date {
         font-size: 13px;
+        font-style: italic;
+        margin-bottom: 10px;
     }
-    .collapsible-experiences, .collapsible-projects {
+    .collapsible {
       color: black;
       cursor: pointer;
       padding: 18px;
@@ -129,17 +81,32 @@ const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url,
       outline: none;
       font-size: 15px;
     }
-    .collapsible-projects {
-      background-color: var(--color-lilac);
-    
+    .collapsible {
+      background-color: var(--color-theme);
     }
-    /* Doesn't work on macos */
-
-    summary {      
+    /* Summary-Details toggle doesn't render on Safari */
+    summary   {      
       font-size: 25px;
+      display:list-item;
       list-style-type: '[+] ';
     } 
     details[open] > summary {
+      display:list-item;
       list-style-type: '[−] ';
+    }
+  /* LINKS */
+    a:link { 
+      text-decoration-line: underline;
+      color: black;}
+    a:visited { text-decoration: none;color: black; }
+    a:hover { 
+      background:  var(--color-theme);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px; } 
+    a:active { text-decoration: none; color: black; }  
+    .wrapper {
+      min-height: var(--wrapper-height);
+      place-items: center;
+      margin: 1rem 3rem 0;
     } 
 </style>

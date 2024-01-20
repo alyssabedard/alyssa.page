@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Lead Volunteer for the HEC Montréal Undergraduate Bal 2019 Edition"
 date: "May 2019"
 summary: "Managed $45,000 of alcohol and beverages for students and performers. Contributed to the smooth running of the $500,000 3-day event and worked closely with the Fairmont Le Manoir Richelieu hotel staff."

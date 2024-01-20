@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Helping Language Learners Reach Reading Literacy in Mandarin Chinese"
 date: "Nov. 2023 - Present"
 summary: "Language analysis tool for Chinese text – personal project"

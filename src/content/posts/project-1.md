@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Knowledge Graph for Adverse Events in Drug Safety"
 date: "Jan. 2023 – May 2023"
 summary: 
@@ -10,7 +10,7 @@ project:
     tags:   ["Web App Development"]
     url: "https://github.com/team-gradvek/gradvek"
     isMoreDetail: true
-# image: "black-heart-pixel.jpeg"
+# image: ""
 ---
 
 Team of 6     	       
@@ -23,17 +23,3 @@ Team of 6
 <img src="https://www.images.alyssabedard.com/search1.png" alt="Project Image1" style="width:500px">
 <img src="https://www.images.alyssabedard.com/result1.png" alt="Project Image2" style="width:500px">
 <img src="https://www.images.alyssabedard.com/kg.png" alt="Project Image3" style="width:500px">
-
-
-
-<style>
-      a:link { 
-      text-decoration-line: underline;
-      color: black;}
-    a:visited { text-decoration: none;color: black; }
-    a:hover { 
-      background:  var(--color-lilac);
-      text-decoration: line-through;
-      text-decoration-thickness: 1px; } 
-    a:active { text-decoration: none; color: black; }  
-</style>

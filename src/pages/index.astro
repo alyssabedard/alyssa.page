@@ -1,24 +1,18 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import ContentHome from '../content/other/home.md';
-import ProfileImage from '../components/ProfileImage.astro';
-import SocialLinks from '../components/previousUI/SocialLinks.astro';
+import Content from '../content/other/home.md';
+import Image from '../components/ProfileImage.astro';
 import TypeWriter from '../components/TypeWriter.astro'
 ---
 
 <MainLayout title="Alyssa Bédard">
-	<main>
-		<div id="ab"><TypeWriter /></div><br>
-		<p>Hey, I'm Alyssa. I'm based in MTL and 
-		can connect the technical and business worlds.
-		I'm passionate about language learning, startups, tech,
-		cultivating speech precision and 
-		mastering efficient learning techniques.
-		Oh, and anime.</p>
-		<ProfileImage />
+	<div id="index-page">
+		<TypeWriter /><br>
+		<Content />
+		<Image />
 		<br>
-		Games I played on this Apple Macintosh iMac G3, in Indigo:
+		<span>Games I played on this Apple Macintosh iMac G3, in Indigo:</span>
 		<button class="btn"><a href="/games/">Here</a></button>
-	</main>
+	</div>
 </MainLayout>
 

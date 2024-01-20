@@ -4,8 +4,7 @@
 const {frontmatter} = Astro.props;
 ---
 
-<!-- <h1> {frontmatter.title}</h1> -->
-<div id="markdown-page">
+<div id="markdown-layout">
     <slot /> <!-- Markdown content is injected here -->
 </div>
 
@@ -15,15 +14,15 @@ const {frontmatter} = Astro.props;
 
     /*  Mixed: Applies to child `tags` elements only. 
         Styling for Markdown elements inside <slot/> */
-    #markdown-page :global(li,p) {
+    #markdown-layout :global(li,p) {
         color: black;
         font-family: var(--font-text);
         font-size: 16px;
     }
-    #markdown-page
+    #markdown-layout
         /* Links */ 
         :global(a:hover) {
-            background:  var(--color-lilac);
+            background:  var(--color-theme);
             text-decoration-thickness: 3px; 
         }
         :global(a:visited) {

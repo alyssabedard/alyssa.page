@@ -14,22 +14,23 @@ import MenuBar from '../components/MenuBar.astro';
 	<MainHead title={title}/>
 	<header></header>
 	<body>
-		<main>
+		<!-- <main> -->
 			<div class="window">
 				<div class="title-bar">
 				  <button aria-label="Close" class="close"></button>
-				  <h1 class="title">Hello, World</h1>
+				  <h1 class="title">Hello, World!</h1>
 				  <button aria-label="Resize" class="resize"></button>
 				</div>
 				<div class="details-bar">
 				  <MenuBar />
 				</div>
 				<div class="window-pane">
-					<!-- slot -->
-					<slot />
+					<main>
+						<slot /><!-- Content of all other pages injected here -->
+					</main>
 				</div>
 			</div>
-		</main>
+		<!-- </main> -->
 	</body>
 	<footer>
 		<Footer />

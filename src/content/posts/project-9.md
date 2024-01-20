@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Online Shopping Customer Prediction "
 date: "Spring 2022"
 summary: ""
