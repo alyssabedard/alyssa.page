@@ -1,16 +1,17 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
-title: "Real-time Tweets Analysis"
+layout: ../../layouts/ProjectMarkdownLayout.astro
+title: "Chinese Characters Database Supporting CRUD Operations"
 date: "Spring 2022"
 summary: ""
 project:
     isTechnical: true
-    stack:  ["Scala", "Spark-NLP", "Twitter API"]
-    tags:   ["Big Data Systems"]
+    stack:  ["Node.js", "Express", "Angular", "MongoDB", "Digital Ocean"]
+    tags:   ["Web Application Development"]
     # url: ""
     isMoreDetail: false
 # image: ""
 ---
 
-<p>Created a Scala program to stream Tweets and identify the language in which each Tweet was written, enabling comprehensive analytics on the various languages used.
+<p>Built a web interface and REST API that allows a Chinese language learner to keep track of characters learned. Renders information on status as well as meaning, pronunciation, and words.
 </p>
+

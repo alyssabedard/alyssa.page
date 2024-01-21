@@ -1,14 +1,13 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import GamesContent from '../content/other/games.md';
+import Content from '../content/other/games.md';
 import ProfileImage from '../components/ProfileImage.astro';
 ---
 
 <MainLayout title="Games | Alyssa Bédard">
-    <main>
+    <div id="games-page">
         <h2>Games</h2>
-
-            <ProfileImage />
-            <GamesContent />
-    </main>
+        <ProfileImage />
+        <Content />
+    </div>
 </MainLayout>
