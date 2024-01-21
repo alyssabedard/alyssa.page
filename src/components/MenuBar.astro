@@ -1,6 +1,7 @@
 ---
 // @ts-nocheck
-
+//  Issue with CSS sheet role="menu-item" not an ariaRole `menuitem`
+//  https://www.w3.org/TR/wai-aria-1.1/#role_definitions
 const github = "https://github.com/alyssabedard";
 const notion = "https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4";
 ---
@@ -10,16 +11,15 @@ const notion = "https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57
     <!-- Normal -->
     <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/">Home</a></li>
     <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/projects/">Projects</a></li>
-    <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/about/">About</a></li>
-    <!-- <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/alyssabedard">GitHub</a></li> -->
+    <li role="menu-item" tabindex="0" aria-haspopup="false"><a href="/contact/">Contact</a></li>
+
     <!-- Dropdown -->
     <li role="menu-item" tabindex="0" aria-haspopup="true">
         Find Me On
         <ul role="menu">
-            <!-- <li role="menu-item"><a href="/about/">Contact</a></li> -->
             <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href={github}>GitHub</a></li>
             <li role="menu-item" class="divider"><a href={notion} target="_blank">Notion</a></li>
-            <li role="menu-item" ><a href="/about/">Résumé & Recommendation Letters</a></li>
         </ul>
     </li>
+
 </ul>

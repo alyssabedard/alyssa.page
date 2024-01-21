@@ -1,0 +1,116 @@
+---
+import ProjectLinks from "./ProjectLinks.astro";
+
+interface Props {
+	title: string;
+	date: string;
+	summary: string;
+  image: string | undefined; 
+  project: object;
+  isTechnical: boolean;
+  stack: string[];
+  tags: string[];
+  url: string | undefined;
+  isMoreDetail: boolean;
+  body: string;
+  slug: string;    
+}
+
+const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url, isMoreDetail, project} = Astro.props;
+---
+<div id="project-cards">
+  <div id="card"  class="wrapper">
+      <div class="collapsible">
+          <div class="date">{date}</div>
+          <details>
+              <summary>
+                  <span  class="title">{title}</span>
+                  <div class="stack">{tags.join(", ")} | {stack.join(", ")}</div>
+              </summary>
+
+              <div class="content">
+              <p>{summary}</p>
+
+                {/* If project has more details show the page link and hide the body content 
+                    else show the body of the MD file */}
+                {isMoreDetail ?
+                  <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
+                  : <div id="body"><Fragment set:html={body} /></div>
+                }
+                <br>
+                {/* Renders project link, if url field not empty */}
+                <div class="link">{url && <ProjectLinks platform="github" url={url}  />}</div>
+                
+                {/* Renders image, if image field not empty */}
+                {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
+              </div>
+          </details>
+      </div>
+  </div>
+</div>
+
+<style>
+    .wrapper {
+      /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
+      margin: 1px !important;
+      margin-bottom: 1rem !important;
+      margin-top: 1rem !important;
+    }
+    hr {border: 1px solid white;}
+    .content, .stack, .date {
+      font-family: var(--font-text);
+      font-size:medium;
+    }
+    .title {
+        font-family: var(--font-header);
+        font-size: 19px;
+        line-height: 80%;
+    }
+    .stack {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    .date {
+        font-size: 13px;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+    .collapsible {
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      border: none;
+      border-radius: 0;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    .collapsible {
+      background-color: var(--color-theme);
+    }
+    /* Summary-Details toggle doesn't render on Safari :( */
+    summary   {      
+      font-size: 25px;
+      display:list-item;
+      list-style-type: '[+] ';
+    } 
+    details[open] > summary {
+      display:list-item;
+      list-style-type: '[−] ';
+    }
+  /* LINKS */
+    a:link { 
+      text-decoration-line: underline;
+      color: black;}
+    a:visited { text-decoration: none;color: black; }
+    a:hover { 
+      background:  var(--color-theme);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px; } 
+    a:active { text-decoration: none; color: black; }  
+    .wrapper {
+      min-height: var(--wrapper-height);
+      place-items: center;
+      margin: 1rem 3rem 0;
+    } 
+</style>

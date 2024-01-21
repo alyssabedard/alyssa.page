@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/AboutMDLayout.astro
+layout: ../../layouts/MarkdownLayout.astro
 title: "Macintosh and Internet Games of my Childhood"
 ---
 

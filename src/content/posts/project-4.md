@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
+layout: ../../layouts/ProjectMarkdownLayout.astro
 title: "Personal Portfolio Website www.alyssabedard.com"
 date: "Jan. 2024 - Present"
 summary: "Objective was to acquire knowlewge in a new framework"
@@ -9,7 +9,7 @@ project:
     tags:   ["Web App Development"]
     url: "https://github.com/alyssabedard/alyssa.page"
     isMoreDetail: false
-# image: "../images/black-heart-pixel.jpeg"
+# image: ""
 ---
 
 <p>Currently under development.</p>
