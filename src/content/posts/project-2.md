@@ -13,4 +13,4 @@ project:
 ---
 
 <p>Collaborated with teammates and Pfizer's AI/ML Lead to deliver a technical presentation on knowledge graphs for drug safety.</p>
-<img src="https://www.images.alyssabedard.com/presentation.png" alt="Project Image" style="width:700px">
+<img src="https://www.images.alyssabedard.com/presentation.png" alt="Project Image">

@@ -14,6 +14,8 @@ import MenuBar from '../components/MenuBar.astro';
 	<MainHead title={title}/>
 	<header></header>
 	<body>
+		<!-- added div -->
+		<div id=body-window>
 		<!-- <main> -->
 			<div class="window">
 				<div class="title-bar">
@@ -30,13 +32,142 @@ import MenuBar from '../components/MenuBar.astro';
 					</main>
 				</div>
 			</div>
+		</div>
 		<!-- </main> -->
+		<!-- <div class="container">
+			<header>Draggable element</header>
+			<div class="draggable-container">
+				<p> This is the example. <br>
+					Click on me and try to drag within this Page.
+				</p>
+			</div>
+		</div> -->
+
 	</body>
 	<footer>
 		<Footer />
 	</footer>
 </html>
 
-<!-- <style is:global>
-</style> -->
+<style is:global>
+	/* CSS MacOS Library */
+	.title-bar button {
+		background-color: var(--color-theme);
+	}
+	.title-bar button.resize {
+		background-color: var(--color-theme);
+	}
+	.window-pane {
+		/* background-color: orange; */
+		padding: 1rem;
+		padding-right: 0;
+		/* To hide scrollbar on window pane */
+		/* overflow:hidden; */
+		/* Scrollbar directly on window-pane */
+		height: 600px;
+  		overflow: auto;
+		
+
+	}
+	/* Change color on hover */
+	.window-pane::-webkit-scrollbar-thumb:hover {
+    	background: var(--color-theme); 
+	}
+	#project-cards{
+		/* background-color:yellow; */
+		margin:0;
+		/* padding: auto; */
+	}
+	 
+	#body-window {
+		/* background-color:green; */
+	}
+	.window {
+		/* background-color:purple; */
+		/* Remove extra margin */
+		margin: auto !important;
+		max-width: 900px;
+		/* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
+		/**** margin-top: 1rem !important; ****/
+		/* RESIZE WINDOW
+			DOESNT WORK YET */
+		/* border: 2px solid; */
+		/* width: 300px; */
+		/* resize: both; */
+		/* overflow: auto; */
+	}
+	html {
+		margin-top: 20px;
+		/* background-color:pink; */
+	}
+	main {
+		margin: auto;
+		max-width: 900px;
+		/* background-color:blanchedalmond; */
+	}
+
+	div.title-bar {
+		/* position: absolute; */
+		z-index: 9;
+		/* background-color: #f1f1f1;
+		border: 1px solid #d3d3d3; */
+		/* text-align: center; */
+	}
+
+	.window {
+		/* padding: 10px; */
+		cursor: move;
+		z-index: 10;
+		/* background-color: #2196F3; */
+		/* color: #fff; */
+	}
+
+
+	/* .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-height: 2rem;
+    width: 15rem;
+    padding: 10px;
+    background-color: rgb(218, 255, 194);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    cursor: move;
+    user-select: none;
+}
+ 
+.container header {
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+ 
+.draggable-container {
+    margin: 10px 0;
+} */
+
+
+</style>
+
+<script>
+//@ts-nocheck
+	// Make the DIV element draggable:
+// script.js File 
+// https://www.geeksforgeeks.org/draggable-element-using-javascript/
+// 	const container = document.querySelector(".container");
+// 	function onMouseDrag({ movementX, movementY }) {
+// 		let getContainerStyle = window.getComputedStyle(container);
+// 		let leftValue = parseInt(getContainerStyle.left);
+// 		let topValue = parseInt(getContainerStyle.top);
+// 		container.style.left = `${leftValue + movementX}px`;
+// 		container.style.top = `${topValue + movementY}px`;
+// 	}
+// 	container.addEventListener("mousedown", () => {
+// 		container.addEventListener("mousemove", onMouseDrag);
+// 	});
+// 	document.addEventListener("mouseup", () => {
+// 		container.removeEventListener("mousemove", onMouseDrag);
+// 	});
+</script>
 

@@ -20,6 +20,6 @@ Team of 6
 
 <p>More details and pictures on Github.</p>
 <!-- <img src="/images/search1.png" alt="Project Image1" style="width:300px height=450"> -->
-<img src="https://www.images.alyssabedard.com/search1.png" alt="Project Image1" style="width:500px">
-<img src="https://www.images.alyssabedard.com/result1.png" alt="Project Image2" style="width:500px">
-<img src="https://www.images.alyssabedard.com/kg.png" alt="Project Image3" style="width:500px">
+<img src="https://www.images.alyssabedard.com/search1.png" alt="Project Image1" >
+<img src="https://www.images.alyssabedard.com/result1.png" alt="Project Image2" >
+<img src="https://www.images.alyssabedard.com/kg.png" alt="Project Image3" >

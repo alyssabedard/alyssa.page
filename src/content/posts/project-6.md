@@ -28,12 +28,12 @@ Prepared an election campaign for 7 months in order to be elected by the student
 <p>
 Team successfully negotiated deals with LMFAO's (American electronic music duo) agent, securing the band as the headline performer graduation ball and with Evenko (Canadian event management company) to orchestrate a university-wide competition
 </p>
-<img src="https://www.images.alyssabedard.com/promotranscend2.JPG" alt="Project Image" style="width:300px">
+<img src="https://www.images.alyssabedard.com/promotranscend2.JPG" alt="Project Image" >
 
-<img src="https://www.images.alyssabedard.com/promotranscend3.JPG" alt="Project Image2" style="width:300px">
+<img src="https://www.images.alyssabedard.com/promotranscend3.JPG" alt="Project Image2" >
 
-<img src="https://www.images.alyssabedard.com/promotranscend4.JPG" alt="Project Image3" style="width:300px">
+<img src="https://www.images.alyssabedard.com/promotranscend4.JPG" alt="Project Image3" >
 
-<img src="https://www.images.alyssabedard.com/promotranscend5.JPG" alt="Project Image4" style="width:300px">
+<img src="https://www.images.alyssabedard.com/promotranscend5.JPG" alt="Project Image4" >
 
-<img src="https://www.images.alyssabedard.com/promotranscend1.JPG" alt="Project Image5" style="width:300px">
+<img src="https://www.images.alyssabedard.com/promotranscend1.JPG" alt="Project Image5" >

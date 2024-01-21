@@ -18,44 +18,48 @@ interface Props {
 
 const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url, isMoreDetail, project} = Astro.props;
 ---
+<div id="project-cards">
+  <div id="card"  class="wrapper">
+      <div class="collapsible">
+          <div class="date">{date}</div>
+          <details>
+              <summary>
+                  <span  class="title">{title}</span>
+                  <div class="stack">{tags.join(", ")} | {stack.join(", ")}</div>
+              </summary>
 
-<div id="card" class="wrapper">
-    <div class="collapsible">
-        <div class="date">{date}</div>
-        <details>
-            <summary>
-                <span  class="title">{title}</span>
-                <div class="stack">{tags.join(", ")} | {stack.join(", ")}</div>
-            </summary>
+              <div class="content">
+              <p>{summary}</p>
 
-            <div class="content">
-             <p>{summary}</p>
-
-              {/* If project has more details show the page link and hide the body content 
-                  else show the body of the MD file */}
-              {isMoreDetail ?
-                <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
-                : <div id="body"><Fragment set:html={body} /></div>
-              }
-              <br>
-              {/* Renders project link, if url field not empty */}
-              <div class="link">{url && <ProjectLinks platform="github" url={url}  />}</div>
-              
-              {/* Renders image, if image field not empty */}
-              {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
-            </div>
-        </details>
-    </div>
+                {/* If project has more details show the page link and hide the body content 
+                    else show the body of the MD file */}
+                {isMoreDetail ?
+                  <i>Click <a href={`/posts/${slug}`}><b>here</b></a> for more details on this project</i>
+                  : <div id="body"><Fragment set:html={body} /></div>
+                }
+                <br>
+                {/* Renders project link, if url field not empty */}
+                <div class="link">{url && <ProjectLinks platform="github" url={url}  />}</div>
+                
+                {/* Renders image, if image field not empty */}
+                {image && <img src={`/src/content/images/${image}`} alt="Project image"/>}
+              </div>
+          </details>
+      </div>
+  </div>
 </div>
 
 <style>
     .wrapper {
-      margin: 1rem !important;
       /* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
+      margin: 1px !important;
+      margin-bottom: 1rem !important;
+      margin-top: 1rem !important;
     }
     hr {border: 1px solid white;}
     .content, .stack, .date {
       font-family: var(--font-text);
+      font-size:medium;
     }
     .title {
         font-family: var(--font-header);
@@ -84,7 +88,7 @@ const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url,
     .collapsible {
       background-color: var(--color-theme);
     }
-    /* Summary-Details toggle doesn't render on Safari */
+    /* Summary-Details toggle doesn't render on Safari :( */
     summary   {      
       font-size: 25px;
       display:list-item;
