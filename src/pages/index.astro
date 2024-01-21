@@ -11,8 +11,19 @@ import TypeWriter from '../components/TypeWriter.astro'
 		<Content />
 		<Image />
 		<br>
-		<span>Games I played on this Apple Macintosh iMac G3, in Indigo:</span>
-		<button class="btn"><a href="/games/">Here</a></button>
+		<div id="test">Games I played on this Apple Macintosh iMac G3, in 
+				<span style="color:#083ee0">Indigo</span>:
+			<button class="btn"><a href="/games/">Here</a></button>
+		</div>
 	</div>
 </MainLayout>
 
+<style>
+	.btn {
+		margin-top: 5px;
+	}
+	#test {
+		font-size: smaller;
+		line-height: 150%;
+	}
+</style>
