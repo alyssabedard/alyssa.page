@@ -1,0 +1,53 @@
+---
+// Layout for the Markdown project pages inside `content/posts`
+
+const {frontmatter} = Astro.props;
+---
+<div id="project-markdown-layout">
+  <!-- Frontmatter Markdown -->
+  <p><b>Date:</b> {frontmatter.date}</p>
+  <p><b>Tags:</b> {frontmatter.project.tags.join(", ")}</p>
+  <p>
+    {/* Checks if project is technical */}
+    {frontmatter.project.isTechnical ? <b>Stack:</b> : <b>Type: </b>}
+    {frontmatter.project.stack.join(", ")}
+  </p>
+
+    {/* Checks if url field not empty */}
+    {frontmatter.project.url ? 
+      <b>URL:</b> <a href={frontmatter.project.url} target="_blank">{frontmatter.project.url}</a> 
+      : ""
+    }
+  <hr>
+  <div id="markdown-body">
+    <slot /> <!-- Markdown content is injected here -->
+  </div>
+</div>
+ 
+<style>
+  /* Scoped to this component, only. */
+  /* Insert here */
+
+  /*  Mixed: Applies to child `tags` elements only. 
+        Styling for Markdown elements inside <slot/> */
+  #markdown-body :global(p) {
+    color: black;
+  }
+  #project-markdown-layout
+    :global(a:link) {
+      text-decoration-line: underline;
+      color: black;
+    }
+    :global(a:visited) {
+      text-decoration: none;color: black;  
+    }
+    :global(a:hover) {
+      background:  var(--color-theme);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;  
+    }
+    :global(a:active) {
+      text-decoration: none; color: black; 
+    }
+
+</style>

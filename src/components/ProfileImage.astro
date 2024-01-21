@@ -1,14 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-// import profileImage from '../content/images/black-heart-pixel.jpeg';
 const profileImage = 'https://www.images.alyssabedard.com/IMG_1365.png'
-
 ---
 
 <div id="img-profile">
     <Image 
         src={profileImage} 
-        alt="Alyssa sitting in front of Machintosh computer."
+        alt="Alyssa sitting in front of her Apple Macintosh iMac G3 computer in the colour Indigo."
         width="450"
         height="300"
         decoding="async"
@@ -23,4 +21,10 @@ const profileImage = 'https://www.images.alyssabedard.com/IMG_1365.png'
         margin-right: auto;
         width: 50%;
     }
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 600px) {
+        #img-profile  {
+            width: 95%;
+        }
+    }  
 </style>

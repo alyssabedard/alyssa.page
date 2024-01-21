@@ -1,35 +1,6 @@
 ---
-# layout: ../../layouts/MDLayout.astro
-title: "About:"
+# layout: ../../layouts/MarkdownLayout.astro
+title: "About"
 ---
 
-<div class="intro-text">
-    ^^
-</div>
-<div class="centered-links">
-    <span class="text-home-project">For technical and non-technical projects:<a href="/projects/">Projects</a><br></span>
-    <span class="text-home-project">For language learning resources, recommendation letters and contact info: <a href="/about/">About</a></span><br>
-</div>
-
-<style>
-    
-    .centered-links {
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
-        height: 15vh;
-    }
-    .centered-links a {
-        color: #333;
-        margin: 0 10px;
-    }
-    .text-home-project {
-            font-family: 'Roboto', sans-serif;
-            font-style: italic;
-            font-size: 15px;
-    }
-    .intro-text {
-            font-family: 'DM Serif Display', serif;
-            font-size: 20px;
-    }
-</style>
+<p>Hey, I'm Alyssa. I'm based in MTL and can connect the technical and business worlds. I'm passionate about language learning, startups, tech, cultivating speech precision and mastering efficient learning techniques. Oh, and anime.</p>

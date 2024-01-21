@@ -1,16 +1,16 @@
 ---
-layout: ../../layouts/ProjectMDLayout.astro
-title: "Online Shopping Customer Prediction "
+layout: ../../layouts/ProjectMarkdownLayout.astro
+title: "Real-time Tweets Analysis"
 date: "Spring 2022"
 summary: ""
 project:
     isTechnical: true
-    stack:  ["Python", "AWS SageMaker/Lambda/API Gateway"]
-    tags:   ["Machine Learning", "Cloud Computing"]
+    stack:  ["Scala", "Spark-NLP", "Twitter API"]
+    tags:   ["Big Data Systems"]
     # url: ""
     isMoreDetail: false
 # image: ""
 ---
 
-<p>Implemented a machine learning model that predicts whether an online shopping customer will complete a purchase. Created an API endpoint with AWS.
+<p>Created a Scala program to stream Tweets and identify the language in which each Tweet was written, enabling comprehensive analytics on the various languages used.
 </p>
