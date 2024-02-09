@@ -1,4 +1,5 @@
 ---
+console.log("Hello :)");
 interface Props {
 	title: string;
 }
@@ -14,42 +15,142 @@ import MenuBar from '../components/MenuBar.astro';
 	<MainHead title={title}/>
 	<header></header>
 	<body>
-		<!-- added div -->
-		<div id=body-window>
-		<!-- <main> -->
-			<div class="window">
-				<div class="title-bar">
-				  <button aria-label="Close" class="close"></button>
-				  <h1 class="title">Hello, World!</h1>
-				  <button aria-label="Resize" class="resize"></button>
-				</div>
-				<div class="details-bar">
-				  <MenuBar />
-				</div>
-				<div class="window-pane">
-					<main>
-						<slot /><!-- Content of all other pages injected here -->
-					</main>
-				</div>
-			</div>
+		<div class="nav-folders">
 		</div>
-		<!-- </main> -->
-		<!-- <div class="container">
-			<header>Draggable element</header>
-			<div class="draggable-container">
-				<p> This is the example. <br>
-					Click on me and try to drag within this Page.
-				</p>
-			</div>
-		</div> -->
-
+		<!-- added div -->
+		<div class="safe-area">
+			<div class="window-container">
+				<!-- <main> -->
+					<div class="window">
+						<div class="title-bar">
+						  <button aria-label="Close" class="close"></button>
+						  <h1 class="title">Hello, World!</h1>
+						  <button aria-label="Resize" class="resize"></button>
+						</div>
+						<div class="details-bar">
+						  <MenuBar />
+						</div>
+						<div class="window-pane">
+							<main>
+								<slot /><!-- Content of all other pages injected here -->
+							</main>
+						</div>
+					</div>
+				</div>
+				<!-- <div id="draggable">
+					<p>What a Drag</p>
+				  </div> -->
+				<!-- </main> -->
+				<!-- <div class="container" id="draggable">
+					<header>Draggable element</header>
+					<div class="draggable-container">
+						<p> This is the example. <br>
+							Click on me and try to drag within this Page.
+						</p>
+					</div>
+				</div> -->
+				<footer>
+					<div id="footer-div"><Footer /></div>
+				</footer>
+		</div>
+		
 	</body>
-	<footer>
-		<Footer />
-	</footer>
+	<!-- <footer>
+		<div id="footer-div"><Footer /></div>
+	</footer> -->
 </html>
 
 <style is:global>
+* {margin: 0;}
+/* html { */
+	/* height: 100vh; */
+	/* margin-top: 20px; */
+	/* background-color:pink; */
+	/* overflow: auto; */
+/* } */
+div {
+    display: block;
+}
+	body, html {
+		/* https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
+		/* Added */
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			height: 100%;
+			/* min-height: 100vh; */
+			/* Makes scrollbar double.. */
+    		/* display: flex;  */
+    		/* flex-direction: column; */
+		background-color:yellowgreen;	
+	}
+	.safe-area {
+		height: 100vh;
+		width: 100vw;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+		.window-container {
+			background-color:green;
+		}
+			.window {
+				background-color:purple;
+				/* Remove extra margin */
+				margin: auto !important;
+				max-width: 900px;
+				cursor: move;
+				z-index: 10;
+				/* overflow: hidden; */
+				/* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
+				/**** margin-top: 1rem !important; ****/
+				/* RESIZE WINDOW
+					DOESNT WORK YET */
+					/* border: 2px solid; */
+					/* width: 300px; */
+					/* resize: both; */
+					/* overflow: auto; */
+			}
+				.window-pane {
+					background-color: orange;
+					padding: 1rem;
+					padding-right: 1;
+					/* To hide scrollbar on window pane */
+					/* overflow:hidden; */
+					/* Scrollbar directly on window-pane */
+					height: 560px;
+					/* overflow: auto; */
+				}
+					main {
+					/* Added */
+					/* flex-grow: 1; */
+						/* margin: auto 0; */
+					/* margin: auto; */
+					max-width: 900px;
+					background-color:blanchedalmond;
+					/* height: 100vh;  */
+					}
+
+		footer{
+			/* Added */
+				/* margin-top: auto; */
+			color: #31302c;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			font-size: 12px;
+		}
+
+			#footer-div {
+			background-color: aquamarine;
+			}
+			#footer {
+			background-color:var(--color-theme);
+			font-family: var(--font-header);
+			color: black;
+			text-align: center;
+			/* margin-top: auto;  */
+			/* Push the footer to the bottom */
+			}
 	/* CSS MacOS Library */
 	.title-bar button {
 		background-color: var(--color-theme);
@@ -57,55 +158,15 @@ import MenuBar from '../components/MenuBar.astro';
 	.title-bar button.resize {
 		background-color: var(--color-theme);
 	}
-	.window-pane {
-		/* background-color: orange; */
-		padding: 1rem;
-		padding-right: 0;
-		/* To hide scrollbar on window pane */
-		/* overflow:hidden; */
-		/* Scrollbar directly on window-pane */
-		height: 600px;
-  		overflow: auto;
-		
-
-	}
-	/* Change color on hover */
+  	/* Change color on hover */
 	.window-pane::-webkit-scrollbar-thumb:hover {
     	background: var(--color-theme); 
 	}
 	#project-cards{
-		/* background-color:yellow; */
+		background-color:yellow;
 		margin:0;
 		/* padding: auto; */
-	}
-	 
-	#body-window {
-		/* background-color:green; */
-	}
-	.window {
-		/* background-color:purple; */
-		/* Remove extra margin */
-		margin: auto !important;
-		max-width: 900px;
-		/* https://stackoverflow.com/questions/18694802/how-to-get-a-wrapper-div-to-fill-100-of-a-browsers-height-regardless-of-the */
-		/**** margin-top: 1rem !important; ****/
-		/* RESIZE WINDOW
-			DOESNT WORK YET */
-		/* border: 2px solid; */
-		/* width: 300px; */
-		/* resize: both; */
-		/* overflow: auto; */
-	}
-	html {
-		margin-top: 20px;
-		/* background-color:pink; */
-	}
-	main {
-		margin: auto;
-		max-width: 900px;
-		/* background-color:blanchedalmond; */
-	}
-
+	} 
 	div.title-bar {
 		/* position: absolute; */
 		z-index: 9;
@@ -114,16 +175,7 @@ import MenuBar from '../components/MenuBar.astro';
 		/* text-align: center; */
 	}
 
-	.window {
-		/* padding: 10px; */
-		cursor: move;
-		z-index: 10;
-		/* background-color: #2196F3; */
-		/* color: #fff; */
-	}
-
-
-	/* .container {
+	.container {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -145,29 +197,19 @@ import MenuBar from '../components/MenuBar.astro';
  
 .draggable-container {
     margin: 10px 0;
-} */
+}
 
 
 </style>
+<!-- <script  src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
 
 <script>
-//@ts-nocheck
-	// Make the DIV element draggable:
-// script.js File 
-// https://www.geeksforgeeks.org/draggable-element-using-javascript/
-// 	const container = document.querySelector(".container");
-// 	function onMouseDrag({ movementX, movementY }) {
-// 		let getContainerStyle = window.getComputedStyle(container);
-// 		let leftValue = parseInt(getContainerStyle.left);
-// 		let topValue = parseInt(getContainerStyle.top);
-// 		container.style.left = `${leftValue + movementX}px`;
-// 		container.style.top = `${topValue + movementY}px`;
-// 	}
-// 	container.addEventListener("mousedown", () => {
-// 		container.addEventListener("mousemove", onMouseDrag);
-// 	});
-// 	document.addEventListener("mouseup", () => {
-// 		container.removeEventListener("mousemove", onMouseDrag);
-// 	});
+console.log("HELLO!")
+
+	// //@ts-nocheck
+		// Make the DIV element draggable:
+	// script.js File 
+	// https://www.geeksforgeeks.org/draggable-element-using-javascript/
+
 </script>
 
