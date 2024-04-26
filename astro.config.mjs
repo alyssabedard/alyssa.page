@@ -9,8 +9,25 @@ import { defineConfig } from 'astro/config';
 // const { SECRET_PASSWORD } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 // const env = loadEnv(mode, process.cwd(), '')
 
-// https://astro.build/config
+import cloudflare from "@astrojs/cloudflare";
+//https://docs.astro.build/en/guides/environment-variables/
+//https://docs.astro.build/en/guides/integrations-guide/cloudflare/#cloudflare-runtime
+// https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
 export default defineConfig({
-  // output: "server",
-  // adapter: cloudflare()
-});
+  output: "server",
+  adapter: cloudflare({
+    runtime: {
+      mode: 'local',
+      type: 'pages',
+      bindings: {
+        // example of a var binding (environment variable)
+        "URL": {
+          type: "var",
+          value: "https://docs.astro.build/en/guides/integrations-guide/cloudflare/#cloudflare-runtime",
+        },
+  
+      },
+    },
+  }),
+  } 
+);

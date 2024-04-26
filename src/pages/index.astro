@@ -3,11 +3,19 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Content from '../content/other/home.md';
 import ProfileImage from '../components/ProfileImage.astro';
 import TypeWriter from '../components/TypeWriter.astro'
+const values = import.meta.env.some_value;
+
+// const myKV = Astro.locals.runtime.env.MY_KV;
+// const value = await myKV.get("key");
+// const runtime = Astro.locals.runtime;
 ---
 
 <MainLayout title="Alyssa Bédard">
 	<div id="index-page">
+		<!-- <pre>{JSON.stringify(runtime.env.EMAIL)}</pre> -->
+		<!-- test here: -->
 		<TypeWriter /><br>
+		<div>{values}</div>
 		<Content />
 		<ProfileImage />
 		<br>
