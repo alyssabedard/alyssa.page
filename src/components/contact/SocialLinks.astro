@@ -1,19 +1,22 @@
 ---
 import Socials from './SocialButtons.astro';
+const GITHUB_URL = import.meta.env.PUBLIC_GITHUB_URL;
+const NOTION_URL = import.meta.env.PUBLIC_NOTION_URL;
+const EMAIL = import.meta.env.EMAIL;
+const MAILTO = `mailto:${EMAIL}`
 ---
 <div>
-    {/*Encoded Email Address */}
     <Socials
         platform="mail"
-        url="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#98;&#51;&#54;&#55;&#56;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+        url={MAILTO}
     />
     <Socials
         platform="github" 
-        url="https://github.com/alyssabedard"
+        url={GITHUB_URL}
     />
     <Socials
         platform="notion" 
-        url="https://alyssabedard.notion.site/Languages-5e39572cb5314ff3baf57f6932a1010d?pvs=4"
+        url={NOTION_URL}
     />
 </div>
 
