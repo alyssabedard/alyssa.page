@@ -23,3 +23,4 @@ Team of 6
 <img src="https://www.images.alyssabedard.com/search1.png" alt="Project Image1" >
 <img src="https://www.images.alyssabedard.com/result1.png" alt="Project Image2" >
 <img src="https://www.images.alyssabedard.com/kg.png" alt="Project Image3" >
+

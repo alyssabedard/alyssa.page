@@ -1,13 +1,14 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectsCollection from '../components/projects/ProjectsCollection.astro'
+
 ---
 
-<MainLayout title="Projects | Alyssa Bédard">
+<BaseLayout title="Projects | Alyssa Bédard">
 	<div id="project-page">
 		<h2>Projects</h2>
 		<span>A list of few projects, including both technical and non-technical ones.</span>
 		<ProjectsCollection />
 	</div>
-</MainLayout>
+</BaseLayout>
 

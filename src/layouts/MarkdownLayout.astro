@@ -12,12 +12,16 @@ const {frontmatter} = Astro.props;
 
     /*  Mixed: Applies to child `tags` elements only. 
         Styling for Markdown elements inside <slot/> */
-    #markdown-layout :global(li,p) {
-        color: black;
-        font-family: var(--font-text);
-        font-size: 17px;
-    }
+
+        /* #markdown-layout   */
     #markdown-layout
+
+        /* :global(li) { 
+            color: black;
+            font-family: var(--font-text);
+            font-size: 17px;
+            margin: 10px;
+        } */
         /* Links */ 
         :global(a:hover) {
             background:  var(--color-theme);

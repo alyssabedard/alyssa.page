@@ -1,6 +1,6 @@
 ---
 
-import MainLayout from '../../layouts/MainLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from "astro:content";
 
 // Get a specific page entry in a content collection by slug
@@ -15,11 +15,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content  } = await entry.render();
 ---
-<MainLayout title=`${entry.data.title} | Alyssa Bédard``>
+<BaseLayout title=`${entry.data.title} | Alyssa Bédard``>
   <div id="project-page">
     <h2>{entry.data.title}</h2>
     <Content />
   </div>
-</MainLayout>
+</BaseLayout>
 
 

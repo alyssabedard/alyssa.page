@@ -29,7 +29,7 @@ const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url,
               </summary>
 
               <div class="content">
-              <p>{summary}</p>
+              <p id="summary-text">{summary}</p>
 
                 {/* If project has more details show the page link and hide the body content 
                     else show the body of the MD file */}
@@ -61,6 +61,14 @@ const {  title, date, summary, stack, tags, isTechnical, image, body, slug, url,
       font-family: var(--font-text);
       font-size:medium;
     }
+    .content {
+      margin-top: 12px;
+      /* margin-bottom: 12px; */
+    }
+    #summary-text {
+      margin-bottom: 20px;
+    }
+    
     .title {
         font-family: var(--font-header);
         font-size: 19px;
