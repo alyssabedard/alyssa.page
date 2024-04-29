@@ -1,7 +1,6 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
-
-Currently under development. 👩🏻‍💻    
+  
 Personal website built with Astro. Deployed on Cloudflare Pages.
 
 [alyssabedard.com](https://alyssabedard.com)
