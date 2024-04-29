@@ -1,0 +1,106 @@
+---
+// console.log("Hello :)");
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import MenuBar from '../components/MenuBar.astro';
+import TitleBar from '../components/TitleBar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<Head title={title}/>
+	<header></header>
+	<body>
+		<div class="safe-area">
+
+			<div class="window-container">
+				<div class="window">
+					<TitleBar />
+					<MenuBar />
+					<div class="window-pane">
+						<main>
+							<slot /><!-- Content of all other pages injected here -->
+						</main>
+					</div>
+				</div>
+			</div>
+
+			<Footer />
+		</div>
+	</body>
+</html>
+
+<script>
+	// Fit UI to the Screen on Mobile Browsers
+	// https://dev.to/ozanbolel/fit-your-website-to-the-viewport-on-mobile-38hl
+    const resizeOps = () => {
+        document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+    };
+
+    resizeOps();
+    window.addEventListener("resize", resizeOps);
+</script>
+
+<style is:global>
+	/* div {display: block;} */
+	body, html { 
+		/* https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
+		/* Added */
+		margin: 0;
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		/* background-color:yellowgreen;	 */
+	}
+	.safe-area {
+		height: 100vh;
+		width: 100vw;
+		overflow-x: hidden;
+		/* overflow-y: scroll; */
+		/* background-color:cornflowerblue; */
+	}
+	.window-container {
+		margin-top: 3%;
+		/* background-color:green; */
+	}
+	.window {
+		/* background-color:purple; */
+		/* Remove extra margin */
+		margin: auto !important;
+		max-width: 900px;
+		/* cursor: move; */
+		z-index: 10;
+	}
+	.window-pane {
+		overflow-y: auto; /* Hide Scroll bar if not needed */
+		/* background-color: orange; */
+		padding: 1rem;
+		padding-right: 1;
+		/* width: 50vw; */
+		/* height: 50vh; */
+		height: calc(var(--vh, 1vh) * 70);
+	}
+	@media screen and (max-device-width: 480px) {
+		.window-pane {
+			height: calc(var(--vh, 1vh) * 78);
+		}
+	}
+	main {
+		max-width: 900px;
+		/* background-color:blanchedalmond; */
+	}
+	#project-cards{
+		/* background-color:yellow; */
+		margin:0;
+		/* padding: auto; */
+	} 
+
+ 
+
+
+</style>
+

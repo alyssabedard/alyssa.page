@@ -1,8 +1,7 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
-
-Currently under development. 👩🏻‍💻    
-Personal website built with Astro. Hosted on Cloudflare Pages.
+  
+Personal website built with Astro. Deployed on Cloudflare Pages.
 
 [alyssabedard.com](https://alyssabedard.com)
 
@@ -22,14 +21,14 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## CSS Libraries
-### Retro System Design CSS
+#### Retro System Design CSS
 https://github.com/sakofchit/system.css?tab=readme-ov-file
 https://sakofchit.github.io/system.css
 
-### TypeWriter JS Animation
-https://www.npmjs.com/package/typeit
+#### TypeWriter JS Animation
+https://www.npmjs.com/package/typeit  
 https://github.com/alexmacarthur/typeit
 
-## Icons
-https://iconify.design/
+#### Icons
+https://iconify.design/  
 https://fontawesome.com/

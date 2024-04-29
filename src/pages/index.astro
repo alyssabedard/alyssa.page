@@ -1,28 +1,27 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import Content from '../content/other/home.md';
-import ProfileImage from '../components/ProfileImage.astro';
-import TypeWriter from '../components/TypeWriter.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentHome from '../content/other/home.md';
+import ProfileImage from '../components/home/ProfileImage.astro';
+import TypeWriter from '../components/home/TypeWriter.astro'
 ---
-
-<MainLayout title="Alyssa Bédard">
+<BaseLayout title="Alyssa Bédard">
 	<div id="index-page">
-		<TypeWriter /><br>
-		<Content />
+		<TypeWriter />
+		<ContentHome />
 		<ProfileImage />
-		<br>
-		<div id="test">Games I played on this Apple Macintosh iMac G3, in 
+		<div id="game-text">Games I played on this Apple Macintosh iMac G3, in 
 				<span style="color:#083ee0">Indigo</span>:
 			<button class="btn"><a href="/games/">Here</a></button>
 		</div>
 	</div>
-</MainLayout>
+</BaseLayout>
 
 <style>
 	.btn {
 		margin-top: 5px;
 	}
-	#test {
+	#game-text {
+		margin-top: 5px;
 		font-size: smaller;
 		line-height: 150%;
 	}
