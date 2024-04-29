@@ -18,8 +18,8 @@ const {frontmatter} = Astro.props;
       <b>URL:</b> <a href={frontmatter.project.url} target="_blank">{frontmatter.project.url}</a> 
       : ""
     }
-  <hr>
-  <div id="markdown-body">
+  <br><br><hr><br>
+  <div id="markdown-body" class="inside-slot">
     <slot /> <!-- Markdown content is injected here -->
   </div>
 </div>
@@ -27,11 +27,16 @@ const {frontmatter} = Astro.props;
 <style>
   /* Scoped to this component, only. */
   /* Insert here */
+  p {
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+  }
 
   /*  Mixed: Applies to child `tags` elements only. 
         Styling for Markdown elements inside <slot/> */
   #markdown-body :global(p) {
     color: black;
+    margin-bottom: 10px;
   }
   #project-markdown-layout
     :global(a:link) {

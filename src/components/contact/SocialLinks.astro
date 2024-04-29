@@ -5,7 +5,7 @@ const NOTION_URL = import.meta.env.PUBLIC_NOTION_URL;
 const EMAIL = import.meta.env.EMAIL;
 const MAILTO = `mailto:${EMAIL}`
 ---
-<div>
+<div id="socials">
     <Socials
         platform="mail"
         url={MAILTO}
@@ -23,5 +23,9 @@ const MAILTO = `mailto:${EMAIL}`
 <style>
     #find-me {
         font-family: var(--font-header);
+    }
+    #socials {
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 </style>
