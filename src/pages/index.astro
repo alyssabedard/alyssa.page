@@ -1,10 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import WindowLayout from '../layouts/WindowLayout.astro';
 import ContentHome from '../content/other/home.md';
 import ProfileImage from '../components/home/ProfileImage.astro';
 import TypeWriter from '../components/home/TypeWriter.astro'
+
 ---
-<BaseLayout title="Alyssa Bédard">
+<WindowLayout title="Alyssa Bédard | Personal Website">
 	<div id="index-page">
 		<TypeWriter />
 		<ContentHome />
@@ -13,8 +14,10 @@ import TypeWriter from '../components/home/TypeWriter.astro'
 				<span style="color:#083ee0">Indigo</span>:
 			<button class="btn"><a href="/games/">Here</a></button>
 		</div>
+		
 	</div>
-</BaseLayout>
+	<!-- <DraggableWindow /> -->
+</WindowLayout>
 
 <style>
 	.btn {

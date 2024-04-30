@@ -1,0 +1,40 @@
+---
+const {title} = Astro.props;
+import BaseLayout from "./BaseLayout.astro";
+import MenuBar from '../components/MenuBar.astro';
+import TitleBar from '../components/TitleBar.astro';
+
+// import Draggable from 'react-draggable';
+import DraggableWindow from '../components/react/DraggableWindow.jsx';
+
+---
+
+<BaseLayout title={title}>
+    <DraggableWindow client:load />
+    <div class="window-container">
+     
+        <div class="window" id="draggable-window">
+            <TitleBar />
+            <MenuBar />
+            <div class="window-pane">
+                <main>
+                    <slot /><!-- Content of all other pages injected here -->
+                </main>
+            </div>
+        </div>
+ 
+
+    </div>
+</BaseLayout>
+
+    <!-- <Draggable handle="strong">
+            <div className="box no-cursor" style={{display: 'flex', flexDirection: 'column'}}>
+              <strong className="cursor"><div>Drag here</div></strong>
+              {/* <div style={{overflow: 'scroll'}}>
+                <div style={{background: 'yellow', whiteSpace: 'pre-wrap'}}>
+                  I have long scrollable content with a handle
+                  {'\n' + Array(40).fill('x').join('\n')}
+                </div>
+              </div> */}
+            </div>
+    </Draggable>  -->

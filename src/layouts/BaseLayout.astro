@@ -9,27 +9,17 @@ import Head from '../components/Head.astro';
 import Footer from '../components/Footer.astro';
 import MenuBar from '../components/MenuBar.astro';
 import TitleBar from '../components/TitleBar.astro';
+
+import Draggable from 'react-draggable';
+import WindowLayout from './WindowLayout.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<Head title={title}/>
-	<header></header>
 	<body>
 		<div class="safe-area">
-
-			<div class="window-container">
-				<div class="window">
-					<TitleBar />
-					<MenuBar />
-					<div class="window-pane">
-						<main>
-							<slot /><!-- Content of all other pages injected here -->
-						</main>
-					</div>
-				</div>
-			</div>
-
+			<slot />
 			<Footer />
 		</div>
 	</body>
@@ -44,9 +34,29 @@ import TitleBar from '../components/TitleBar.astro';
 
     resizeOps();
     window.addEventListener("resize", resizeOps);
+
+
+
 </script>
 
 <style is:global>
+	/* #draggable-window {
+	position: absolute;
+	z-index: 9;
+	background-color: #f1f1f1;
+	border: 1px solid #d3d3d3;
+	}
+
+	#draggable-title {
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2196F3;
+	color: #fff;
+	} */
+
+
+
 	/* div {display: block;} */
 	body, html { 
 		/* https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */

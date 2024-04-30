@@ -1,16 +1,11 @@
 import { defineConfig } from 'astro/config';
-
-// Cloudflare Package
-// import cloudflare from "@astrojs/cloudflare";
-
-// Environment Variables
-// import { loadEnv } from "vite";
-// const { PUBLIC_IMAGE_URL} = loadEnv(process.env.NODE_ENV, process.cwd(), "");
-// const { SECRET_PASSWORD } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
-// const env = loadEnv(mode, process.cwd(), '')
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  // output: "server",
-  // adapter: cloudflare()
+  integrations: [react({
+    // Recommended to place common framework components 
+    //  in the same folder (e.g. /components/react/)
+    include: ['**/react/*']
+  })]
 });
